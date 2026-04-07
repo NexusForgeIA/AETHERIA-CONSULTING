@@ -655,11 +655,7 @@ function send(){
 
 function onKey(e){ if(e.key==='Enter') send(); }
 
-document.addEventListener('click', e=>{
-    const w=document.getElementById('chat-window');
-    const b=document.getElementById('chat-btn');
-    if(chatOpen && !w.contains(e.target) && !b.contains(e.target)) toggleChat();
-});
+// Chat solo se cierra con el botón ×
 </script>
 </body>
 </html>
