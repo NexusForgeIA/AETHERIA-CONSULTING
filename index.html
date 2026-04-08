@@ -403,6 +403,17 @@
     .btn-tel { padding: 14px 28px; border-radius: 10px; background: transparent; border: 1px solid var(--border); color: var(--text); font-weight: 500; font-size: .92rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all .2s; }
     .btn-tel:hover { border-color: var(--p); color: var(--p2); }
 
+    /* ─── SOCIAL ─── */
+    .social-links { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+    .social-link {
+      width: 38px; height: 38px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border); background: rgba(124,77,255,.08);
+      transition: all .2s; text-decoration: none;
+    }
+    .social-link:hover { background: rgba(124,77,255,.22); border-color: var(--p); transform: translateY(-2px); }
+    .social-link svg { width: 18px; height: 18px; }
+
     /* ─── FOOTER ─── */
     footer { background: #060609; border-top: 1px solid var(--border-soft); padding: 48px 0 32px; }
     .foot-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border-soft); }
@@ -563,6 +574,10 @@
         WhatsApp: 643 199 580
       </a>
       <a href="#precios" class="btn-out">Ver planes →</a>
+      <a href="https://www.instagram.com/whitemoon_agencia_ia?igsh=MWxkMjFkaHRxaDI4eg%3D%3D&utm_source=qr" target="_blank" rel="noopener" style="padding:13px 22px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:#f0f0f8;font-size:.9rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .2s;" onmouseover="this.style.background='rgba(188,24,136,.15)';this.style.borderColor='rgba(220,39,67,.4)'" onmouseout="this.style.background='rgba(255,255,255,.06)';this.style.borderColor='rgba(255,255,255,.15)'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="ig2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="50%" stop-color="#dc2743"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" stroke="url(#ig2)" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4.5" stroke="url(#ig2)" stroke-width="2" fill="none"/><circle cx="17.5" cy="6.5" r="1.3" fill="url(#ig2)"/></svg>
+        @whitemoon_agencia_ia
+      </a>
     </div>
   </div>
 </section>
@@ -1067,6 +1082,32 @@
         <button onclick="openLegal('aviso')">Aviso Legal</button>
         <button onclick="openLegal('privacidad')">Privacidad</button>
         <button onclick="openLegal('cookies')">Cookies</button>
+      </div>
+      <div class="social-links">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/whitemoon_agencia_ia?igsh=MWxkMjFkaHRxaDI4eg%3D%3D&utm_source=qr" target="_blank" rel="noopener" class="social-link" title="Instagram @whitemoon_agencia_ia">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#f09433"/>
+                <stop offset="25%" stop-color="#e6683c"/>
+                <stop offset="50%" stop-color="#dc2743"/>
+                <stop offset="75%" stop-color="#cc2366"/>
+                <stop offset="100%" stop-color="#bc1888"/>
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="20" height="20" rx="5" stroke="url(#ig-grad)" stroke-width="1.8" fill="none"/>
+            <circle cx="12" cy="12" r="4.5" stroke="url(#ig-grad)" stroke-width="1.8" fill="none"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="url(#ig-grad)"/>
+          </svg>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/34643199580" target="_blank" rel="noopener" class="social-link" title="WhatsApp 643 199 580">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.396A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" stroke="#25D366" stroke-width="1.8" fill="none"/>
+            <path d="M8.5 9.5c.3.9 1 2.5 2.5 4s3.1 2.2 4 2.5c.4.1.8 0 1-.3l.5-.7c.2-.3.1-.7-.1-.9l-1.5-1c-.2-.1-.5-.1-.7.1l-.4.4c-.1.1-.3.1-.4 0-.6-.4-1.8-1.6-2.2-2.2-.1-.1-.1-.3 0-.4l.4-.4c.2-.2.2-.5.1-.7l-1-1.5c-.2-.3-.6-.3-.9-.1l-.7.5c-.3.2-.4.6-.3 1z" fill="#25D366"/>
+          </svg>
+        </a>
       </div>
     </div>
     <p class="foot-copy">© <span id="yr"></span> WHITEMOON Agencia de IA. Todos los derechos reservados.</p>
