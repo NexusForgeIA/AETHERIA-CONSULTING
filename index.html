@@ -541,6 +541,61 @@
     .lhl { background: rgba(124,77,255,.06); border-left: 2px solid var(--p); padding: 12px 14px; border-radius: 4px; margin-bottom: 12px; }
     .lhl p { color: rgba(240,240,245,.6); font-size: .84rem; margin-bottom: 3px; }
     .lhl a { color: var(--p2); text-decoration: none; }
+
+    /* ─── PRIMER PAGO BREAKDOWN ─── */
+    .price-first-pay {
+      background: rgba(124,77,255,.07);
+      border: 1px solid rgba(124,77,255,.25);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+    }
+    .price-card.featured .price-first-pay {
+      background: rgba(124,77,255,.13);
+      border-color: rgba(124,77,255,.45);
+    }
+    .pfp-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--p2);
+      margin-bottom: 10px;
+    }
+    .pfp-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .82rem;
+      color: var(--muted);
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(124,77,255,.12);
+    }
+    .pfp-row:last-of-type { border-bottom: none; }
+    .pfp-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .92rem;
+      font-weight: 800;
+      color: var(--text);
+      padding: 8px 0 6px;
+      border-top: 1px solid rgba(124,77,255,.3);
+      margin-top: 6px;
+    }
+    .pfp-total span:last-child {
+      background: linear-gradient(135deg, var(--p2), var(--g));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.05rem;
+    }
+    .pfp-after {
+      font-size: .73rem;
+      color: var(--g);
+      margin-top: 6px;
+      text-align: center;
+    }
+    .pfp-after b { color: var(--g); }
     @media(max-width:960px) {
       .prob-grid { grid-template-columns: 1fr; background: none; border: none; gap: 16px; }
       .prob-card { border: 1px solid var(--border); border-radius: var(--r); }
@@ -777,6 +832,13 @@
           <li>Botón directo a WhatsApp</li>
           <li>Actualizaciones incluidas</li>
         </ul>
+        <div class="price-first-pay">
+          <div class="pfp-label">💳 1er pago (mantenimiento adelantado)</div>
+          <div class="pfp-row"><span>Cuota mensual</span><span>79€</span></div>
+          <div class="pfp-row"><span>Mantenimiento anual</span><span>180€</span></div>
+          <div class="pfp-total"><span>Total 1er mes</span><span>259€</span></div>
+          <div class="pfp-after">A partir del 2º mes: solo <b>79€/mes</b></div>
+        </div>
         <button class="price-btn pb-out">Ver detalles →</button>
       </div>
       <!-- PACK ADVANCE -->
@@ -798,6 +860,13 @@
           <li>Respuestas rápidas personalizadas</li>
           <li>Actualización de contenidos incluida</li>
         </ul>
+        <div class="price-first-pay">
+          <div class="pfp-label">💳 1er pago (mantenimiento adelantado)</div>
+          <div class="pfp-row"><span>Cuota mensual</span><span>99€</span></div>
+          <div class="pfp-row"><span>Mantenimiento anual</span><span>240€</span></div>
+          <div class="pfp-total"><span>Total 1er mes</span><span>339€</span></div>
+          <div class="pfp-after">A partir del 2º mes: solo <b>99€/mes</b></div>
+        </div>
         <button class="price-btn pb-solid">Ver detalles →</button>
       </div>
       <!-- PACK ENTERPRISE -->
@@ -817,6 +886,13 @@
           <li>Soporte técnico prioritario</li>
           <li>Informes de rendimiento incluidos</li>
         </ul>
+        <div class="price-first-pay">
+          <div class="pfp-label">💳 Desglose de pagos</div>
+          <div class="pfp-row"><span>Configuración (único)</span><span>3.599€</span></div>
+          <div class="pfp-row"><span>Mantenimiento anual</span><span>1.399€</span></div>
+          <div class="pfp-total"><span>Total 1er año</span><span>4.998€</span></div>
+          <div class="pfp-after">Renovación anual: solo <b>1.399€/año</b></div>
+        </div>
         <button class="price-btn pb-out">Ver detalles →</button>
       </div>
     </div>
@@ -1014,6 +1090,9 @@ const KB = {
   saludo:{ kw:['hola','buenas','hey','saludos'],
     answer:`¡Hola! 👋 Soy el <b>Agente IA</b> de WHITEMOON.<br>¿En qué puedo ayudarte?`,
     replies:['¿Qué servicios ofrecéis?','¿Cuánto cuesta?','Ver demo'] },
+  mantenimiento:{ kw:['mantenimiento','mantenimiento?','incluye el mantenimiento','que incluye','soporte','actualizaciones'],
+    answer:`🔧 <b>¿Qué incluye el mantenimiento anual?</b><br><br>→ Actualizaciones de contenido del chatbot<br>→ Corrección de fallos y bugs<br>→ Soporte técnico directo por WhatsApp<br>→ Adaptaciones menores de flujo<br>→ Garantía de funcionamiento 12 meses<br><br>💡 Se paga <b>por adelantado</b> junto con la 1ª cuota mensual.`,
+    replies:['Entendido, quiero empezar','Ver los planes','Hablar con el equipo'] },
   default:{ answer:`Soy el Agente IA de WHITEMOON. Puedo informarte sobre servicios, precios y demos.<br><br>💬 <a href="https://wa.me/34643199580" target="_blank" style="color:#9d70ff;font-weight:600">WhatsApp: 643 199 580</a>`,
     replies:['¿Qué servicios ofrecéis?','¿Cuánto cuesta?','Ver demo','Contactar'] }
 };
@@ -1028,11 +1107,29 @@ const ACTIONS = {
   'Pedir info Pack Advance':()=>window.open('https://wa.me/34643199580?text=Pack%20Advance%2099%E2%82%AC%2Fmes','_blank'),
   'Enviar email':()=>window.open('mailto:comercialwhitemoon@whitemoon.es'),
   'Contactar':()=>window.open('https://wa.me/34643199580','_blank'),
+  'Entendido, quiero empezar':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20entendido%20el%20pago%20de%20mantenimiento%2C%20quiero%20empezar','_blank'),
+  'Ver los planes':()=>{document.getElementById('precios').scrollIntoView({behavior:'smooth'});toggleChat();},
+  'Hablar con el equipo':()=>window.open('https://wa.me/34643199580','_blank'),
 };
 
 let chatOpen=false,inited=false;
 function toggleChat(){chatOpen=!chatOpen;const w=document.getElementById('chat-window');w.style.display=chatOpen?'flex':'none';if(chatOpen&&!inited){inited=true;initChat();}if(chatOpen)setTimeout(()=>document.getElementById('chat-in').focus(),300);}
-function initChat(){addMsg('bot','¡Hola! 👋 Soy el <b>Agente IA</b> de WHITEMOON.<br>¿En qué puedo ayudarte?');setQR(['¿Qué servicios ofrecéis?','¿Cuánto cuesta?','Ver demo','Contactar']);}
+function initChat(){
+  // Mensaje 1: bienvenida
+  addMsg('bot','¡Hola! 👋 Soy el <b>Agente IA</b> de WHITEMOON.<br>¿En qué puedo ayudarte?');
+  // Mensaje 2: aviso pago mantenimiento (escalonado)
+  setTimeout(()=>{
+    addMsg('bot',
+      '💳 <b>Aviso importante antes de activar tu chatbot:</b><br><br>' +
+      'El <b>pago del mantenimiento anual</b> se abona <b>por adelantado</b> junto con la primera cuota mensual:<br><br>' +
+      '🤖 <b>Pack Basic</b> — 1ª cuota: <b>79€ + 180€</b> = <b style="color:#9d70ff">259€</b><br>' +
+      '💬 <b>Pack Advance</b> — 1ª cuota: <b>99€ + 240€</b> = <b style="color:#9d70ff">339€</b><br><br>' +
+      '✅ A partir del 2º mes, solo pagas la cuota mensual (79€ o 99€).<br>' +
+      '✅ El mantenimiento cubre actualizaciones, soporte y funcionamiento garantizado durante 12 meses.'
+    );
+    setQR(['Entendido, quiero empezar','¿Qué incluye el mantenimiento?','Ver los planes','Hablar con el equipo']);
+  }, 900);
+}
 function addMsg(who,html){const c=document.getElementById('chat-msgs');const d=document.createElement('div');d.className='msg '+who;const b=document.createElement('div');b.className='bubble';b.innerHTML=html;d.appendChild(b);c.appendChild(d);c.scrollTop=c.scrollHeight;}
 function showTyping(){const c=document.getElementById('chat-msgs');const d=document.createElement('div');d.className='msg bot';d.id='typing';d.innerHTML='<div class="typing-b"><div class="td"></div><div class="td"></div><div class="td"></div></div>';c.appendChild(d);c.scrollTop=c.scrollHeight;}
 function hideTyping(){const t=document.getElementById('typing');if(t)t.remove();}
