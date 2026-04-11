@@ -289,11 +289,35 @@
     .value-body ul li::before { content: '→'; color: var(--g); font-weight: 700; flex-shrink: 0; font-size: .78rem; margin-top: 1px; }
 
     /* ── PRICING ── */
-    .price-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; align-items: start; }
+    .price-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; align-items: stretch; }
     .price-card {
       background: var(--card); border: 1px solid var(--border);
       border-radius: var(--r); padding: 34px 28px;
-      transition: all .25s; cursor: pointer; position: relative;
+      transition: all .35s; cursor: pointer; position: relative;
+      display: flex; flex-direction: column;
+    }
+    /* Secciones colapsables */
+
+    .price-btn-group { display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding-top: 20px; }
+    .pb-ghost {
+      background: transparent; border: 1px solid var(--border);
+      color: var(--muted); font-size: .8rem; padding: 8px 16px;
+      border-radius: 8px; cursor: pointer; transition: all .2s;
+      width: 100%;
+    }
+    .pb-ghost:hover { border-color: var(--p); color: var(--p); }
+    .pb-ghost.gold-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .pb-ghost.active { border-color: var(--p); color: var(--p); }
+    .pb-ghost.gold-ghost.active { border-color: var(--gold); color: var(--gold); }
+    .price-card .price-first-pay,
+    .price-card .pfp-after {
+      max-height: 0; overflow: hidden; opacity: 0;
+      transition: max-height .4s ease, opacity .3s ease, margin .3s ease;
+      margin-top: 0;
+    }
+    .price-card.expanded .price-first-pay,
+    .price-card.expanded .pfp-after {
+      max-height: 500px; opacity: 1; margin-top: 16px;
     }
     .price-card:hover { transform: translateY(-4px); border-color: var(--p); box-shadow: 0 12px 40px rgba(124,77,255,.2); }
     .price-card.featured {
@@ -871,7 +895,7 @@
     </div>
     <div class="price-grid">
       <!-- PACK BASIC -->
-      <div class="price-card" onclick="openPack('basic')">
+      <div class="price-card" id="card-basic">
         <div class="price-tier">Para empezar</div>
         <div class="price-name">Pack Basic</div>
         <div class="price-desc">Chatbot IA informativo con menú guiado</div>
@@ -893,11 +917,11 @@
           <div class="pfp-total"><span>Total 1er mes</span><span>259€</span></div>
           <div class="pfp-after">A partir del 2º mes: solo <b>79€/mes</b></div>
         </div>
-        <button class="price-btn pb-out">Ver detalles →</button>
+        <div class="price-btn-group"><button class="price-btn pb-ghost" onclick="toggleDesglose('basic')">Ver desglose ▾</button><button class="price-btn pb-out" onclick="openPack('basic')">Ver detalles →</button></div>
       </div>
 
       <!-- PACK ADVANCE -->
-      <div class="price-card featured" onclick="openPack('advance')">
+      <div class="price-card featured" id="card-advance">
         <div class="price-pill">⭐ Más popular</div>
         <div class="price-tier">Para crecer</div>
         <div class="price-name">Pack Advance</div>
@@ -921,11 +945,11 @@
           <div class="pfp-total"><span>Total 1er mes</span><span>339€</span></div>
           <div class="pfp-after">A partir del 2º mes: solo <b>99€/mes</b></div>
         </div>
-        <button class="price-btn pb-solid">Ver detalles →</button>
+        <div class="price-btn-group"><button class="price-btn pb-ghost" onclick="toggleDesglose('advance')">Ver desglose ▾</button><button class="price-btn pb-solid" onclick="openPack('advance')">Ver detalles →</button></div>
       </div>
 
       <!-- PACK PYME ★ NUEVO ★ -->
-      <div class="price-card pyme" onclick="openPack('pyme')">
+      <div class="price-card pyme" id="card-pyme">
         <div class="price-pill gold-pill">🏆 Recomendado Pymes</div>
         <div class="price-tier gold-tier">Web + IA todo en uno</div>
         <div class="price-name">Pack Pyme</div>
@@ -939,25 +963,25 @@
           <li>Dominio .es o .com (1 año incluido)</li>
           <li>Chatbot IA conversacional integrado</li>
           <li>Funcionalidades Basic + Advance</li>
-          <li>Responsive y optimizado para móvil</li>
+          <li>📱 Diseño responsive para móvil</li>
           <li>SEO básico configurado</li>
           <li>Botón WhatsApp y formulario de contacto</li>
           <li>Mantenimiento técnico 12 meses</li>
         </ul>
         <div class="price-first-pay">
           <div class="pfp-label gold-lbl">💳 Desglose del pago único</div>
-          <div class="pfp-row gold-row"><span>Web + diseño personalizado</span><span>incluido</span></div>
+          <div class="pfp-row gold-row"><span>Web + diseño responsive móvil</span><span>incluido</span></div>
           <div class="pfp-row gold-row"><span>Dominio .es/.com (1 año)</span><span>incluido</span></div>
           <div class="pfp-row gold-row"><span>Chatbot IA Basic + Advance</span><span>incluido</span></div>
           <div class="pfp-row gold-row"><span>Mantenimiento 12 meses</span><span>incluido</span></div>
           <div class="pfp-total gold-total"><span>Total único</span><span>1.250€</span></div>
           <div class="pfp-after gold-after">Renovación web + chatbot: <b>desde 180€/año</b></div>
         </div>
-        <button class="price-btn pb-solid-gold">Ver detalles →</button>
+        <div class="price-btn-group"><button class="price-btn pb-ghost gold-ghost" onclick="toggleDesglose('pyme')">Ver desglose ▾</button><button class="price-btn pb-solid-gold" onclick="openPack('pyme')">Ver detalles →</button></div>
       </div>
 
       <!-- PACK ENTERPRISE -->
-      <div class="price-card" onclick="openPack('enterprise')">
+      <div class="price-card" id="card-enterprise">
         <div class="price-tier">Para empresas</div>
         <div class="price-name">Pack Enterprise</div>
         <div class="price-desc">Automatización completa N8N a medida</div>
@@ -980,7 +1004,7 @@
           <div class="pfp-total"><span>Total 1er año</span><span>4.998€</span></div>
           <div class="pfp-after">Renovación anual: solo <b>1.399€/año</b></div>
         </div>
-        <button class="price-btn pb-out">Ver detalles →</button>
+        <div class="price-btn-group"><button class="price-btn pb-ghost" onclick="toggleDesglose('enterprise')">Ver desglose ▾</button><button class="price-btn pb-out" onclick="openPack('enterprise')">Ver detalles →</button></div>
       </div>
     </div>
   </div>
@@ -1299,6 +1323,21 @@ const PACKS={
   }
 };
 
+
+function toggleDesglose(id) {
+  const card = document.getElementById('card-' + id);
+  const btn = card.querySelector('.pb-ghost');
+  const isExpanded = card.classList.contains('expanded');
+  // Colapsar todas
+  document.querySelectorAll('.price-card').forEach(c => c.classList.remove('expanded'));
+  document.querySelectorAll('.pb-ghost').forEach(b => { b.classList.remove('active'); b.textContent = 'Ver desglose ▾'; });
+  // Si no estaba expandida, expandir esta
+  if (!isExpanded) {
+    card.classList.add('expanded');
+    btn.classList.add('active');
+    btn.textContent = 'Ocultar desglose ▴';
+  }
+}
 function openPack(id){
   const p=PACKS[id];
   const head=document.getElementById('pm-head');
