@@ -1647,7 +1647,7 @@ const ACTIONS = {
   'LaunchPack 99€/mes':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20LaunchPack%20de%20RRSS%2099%E2%82%AC%2Fmes','_blank'),
   'Accelerator Pack 199€/mes':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Accelerator%20Pack%20199%E2%82%AC%2Fmes','_blank'),
   'Scale Pack 399€/mes':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Scale%20Pack%20399%E2%82%AC%2Fmes','_blank'),
-  'Planes RRSS':null,
+  'Planes RRSS':()=>{ const r=KB['rrss']; addMsg('bot',r.answer); if(r.replies) setQR(r.replies); },
   'Enviar email':()=>window.open('mailto:comercialwhitemoon@whitemoon.es'),
   'Contactar':()=>window.open('https://wa.me/34643199580','_blank'),
   'Ver los planes':()=>{document.getElementById('precios').scrollIntoView({behavior:'smooth'});toggleChat();},
