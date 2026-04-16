@@ -294,6 +294,18 @@
       transition: all .2s; margin-left: 6px; border: 1px solid transparent;
     }
     .nav-cta:hover { background: var(--p-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(124,77,255,.35); }
+    .nav-agent {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 9px 18px; border-radius: 8px;
+      background: linear-gradient(135deg, rgba(124,77,255,.12), rgba(0,212,170,.08));
+      border: 1px solid rgba(124,77,255,.35);
+      color: var(--p2); font-size: .82rem; font-weight: 600;
+      cursor: pointer; text-decoration: none; font-family: inherit;
+      transition: all .2s; margin-right: 4px; position: relative;
+    }
+    .nav-agent:hover { background: linear-gradient(135deg, rgba(124,77,255,.22), rgba(0,212,170,.14)); border-color: var(--p); color: #fff; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(124,77,255,.25); }
+    .nav-agent::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--g); animation: blink 2s infinite; flex-shrink: 0; }
+    @media(max-width:900px){ .nav-agent span.nav-agent-full { display: none; } .nav-agent { padding: 8px 12px; } }
     .hero {
       padding: 148px 0 100px;
       text-align: center;
@@ -925,6 +937,7 @@
       <a href="javascript:void(0)" class="nav-link" onclick="document.getElementById('metodo').scrollIntoView({behavior:'smooth'})">Método</a>
       <a href="javascript:void(0)" class="nav-link" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})">FAQ</a>
       <a href="https://whitemoon.es/blog/" class="nav-link">Blog</a>
+      <button type="button" id="navAgentBtn" class="nav-agent" aria-label="Abrir agente IA comercial"><span class="nav-agent-full">Agente IA Comercial</span><span style="display:none" class="nav-agent-short">IA</span></button>
       <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON" target="_blank" rel="noopener" class="nav-cta" rel="noopener noreferrer">Contactar</a>
     </div>
   </div>
@@ -1966,6 +1979,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closePack();closeLe
 
   function wmInit(){
     wmBind('wmHubBtn', 'click', wmToggleHub);
+    wmBind('navAgentBtn', 'click', wmToggleHub);
     wmBind('wmOptChat', 'click', wmOpenChat);
     wmBind('wmOptWa', 'click', wmCloseAll);
     wmBind('wmChatClose', 'click', wmBackToMenu);
