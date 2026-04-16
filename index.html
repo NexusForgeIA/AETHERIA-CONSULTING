@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es" prefix="og: https://ogp.me/ns#">
 <head>
@@ -741,49 +740,6 @@
     .foot-links button, .foot-links a { background: none; border: none; color: var(--muted); font-size: .82rem; cursor: pointer; text-decoration: none; font-family: inherit; transition: color .2s; }
     .foot-links button:hover, .foot-links a:hover { color: var(--p2); }
     .foot-copy { font-size: .78rem; color: var(--muted2); margin-top: 24px; }
-    .wa-float { position: fixed; bottom: 24px; right: 24px; width: 58px; height: 58px; border-radius: 50%; background: var(--wa); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,.45); z-index: 1000; text-decoration: none; transition: all .25s; animation: wap 2.8s infinite; }
-    @keyframes wap { 0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.45)} 50%{box-shadow:0 6px 36px rgba(37,211,102,.75),0 0 0 10px rgba(37,211,102,.07)} }
-    .wa-float:hover { transform: scale(1.1); background: var(--wa-dark); animation: none; }
-    .wa-float svg { width: 28px; height: 28px; }
-    #chat-btn { position: fixed; bottom: 94px; right: 24px; width: 58px; height: 58px; border-radius: 50%; border: 2px solid var(--border); cursor: pointer; overflow: hidden; z-index: 999; transition: all .25s; padding: 0; background: var(--bg3); box-shadow: 0 4px 20px rgba(0,0,0,.4); }
-    #chat-btn img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-    #chat-btn:hover { transform: scale(1.08); border-color: var(--p); box-shadow: 0 6px 24px rgba(124,77,255,.3); }
-    #chat-window { display: none; position: fixed; bottom: 94px; right: 94px; width: 380px; max-width: calc(100vw - 24px); height: min(560px, calc(100dvh - 120px)); background: #0e0e18; border: 1px solid var(--border); border-radius: 18px; box-shadow: 0 24px 60px rgba(0,0,0,.6); z-index: 998; flex-direction: column; overflow: hidden; animation: ci .25s ease; }
-    @keyframes ci { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
-    #chat-head { background: linear-gradient(135deg, var(--p), #a855f7 60%, var(--g)); padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
-    .ch-l { display: flex; align-items: center; gap: 10px; }
-    .ch-av { width: 38px; height: 38px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(255,255,255,.35); flex-shrink: 0; }
-    .ch-av img { width: 100%; height: 100%; object-fit: cover; }
-    .ch-name { font-size: .88rem; font-weight: 700; color: #fff; }
-    .ch-st { font-size: .7rem; color: rgba(255,255,255,.75); display: flex; align-items: center; gap: 4px; }
-    .ch-dot { width: 5px; height: 5px; border-radius: 50%; background: #a8ffb0; animation: bl 2s infinite; }
-    @keyframes bl { 0%,100%{opacity:1}50%{opacity:.3} }
-    #chat-x { background: rgba(255,255,255,.15); border: none; color: #fff; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: .95rem; transition: background .2s; }
-    #chat-x:hover { background: rgba(255,255,255,.3); }
-    #chat-msgs { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; background: #0a0a12; }
-    #chat-msgs::-webkit-scrollbar { width: 3px; }
-    #chat-msgs::-webkit-scrollbar-thumb { background: rgba(124,77,255,.3); border-radius: 2px; }
-    .msg { display: flex; animation: mi .22s ease; }
-    @keyframes mi { from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none} }
-    .msg.bot { justify-content: flex-start; }
-    .msg.user { justify-content: flex-end; }
-    .bubble { max-width: 82%; padding: 10px 14px; border-radius: 14px; font-size: .85rem; line-height: 1.55; }
-    .msg.bot .bubble { background: #1a1a28; border: 1px solid var(--border-soft); color: var(--text); border-bottom-left-radius: 3px; }
-    .msg.user .bubble { background: linear-gradient(135deg, var(--p), #a855f7); color: #fff; border-bottom-right-radius: 3px; }
-    .typing-b { background: #1a1a28; border: 1px solid var(--border-soft); padding: 12px 16px; border-radius: 14px; border-bottom-left-radius: 3px; display: flex; gap: 4px; align-items: center; }
-    .td { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: td 1.2s infinite; }
-    .td:nth-child(2){animation-delay:.15s}.td:nth-child(3){animation-delay:.3s}
-    @keyframes td{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
-    #qr-wrap { padding: 0 12px 10px; display: flex; flex-wrap: wrap; gap: 6px; background: #0a0a12; }
-    .qr { background: rgba(124,77,255,.08); border: 1px solid var(--border); color: var(--p2); padding: 6px 12px; border-radius: 20px; font-size: .76rem; cursor: pointer; transition: all .2s; font-family: inherit; }
-    .qr:hover { background: rgba(124,77,255,.18); color: #fff; }
-    #chat-bar { display: flex; gap: 8px; padding: 12px 12px; border-top: 1px solid var(--border-soft); background: #0e0e18; }
-    #chat-in { flex: 1; padding: 9px 14px; border: 1px solid var(--border-soft); border-radius: 8px; background: #1a1a28; color: var(--text); font-family: inherit; font-size: .85rem; outline: none; transition: border-color .2s; }
-    #chat-in:focus { border-color: var(--p); }
-    #chat-in::placeholder { color: var(--muted2); }
-    #chat-go { width: 38px; height: 38px; border-radius: 8px; border: none; background: var(--p); color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: .9rem; transition: all .2s; flex-shrink: 0; }
-    #chat-go:hover { background: var(--p-dark); }
-    .chat-ft { text-align: center; font-size: .65rem; color: var(--muted2); padding: 6px; background: #0e0e18; }
     .mo { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.75); z-index: 2000; overflow-y: auto; padding: 48px 20px; backdrop-filter: blur(8px); }
     .mbox { max-width: 520px; margin: 0 auto; background: #111118; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; }
     .mhead { background: linear-gradient(135deg, var(--p), #a855f7 60%, var(--g)); padding: 26px 30px; position: relative; }
@@ -944,9 +900,6 @@
       .prob-card { padding: 26px 20px; }
       .value-card { flex-direction: column; gap: 10px; }
       .value-num { font-size: 1.5rem; }
-      #chat-window { right: 12px; bottom: 90px; width: calc(100vw - 24px); }
-      .wa-float { bottom: 16px; right: 16px; width: 52px; height: 52px; }
-      #chat-btn { bottom: 78px; right: 16px; width: 52px; height: 52px; }
     }
   </style>
   <!-- ── PERFORMANCE: PRECONNECT ── -->
@@ -1567,33 +1520,6 @@
   </div>
 </footer>
 
-<!-- WA FLOAT -->
-<a href="https://wa.me/34643199580?text=Hola%20WHITEMOON" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp" rel="noopener noreferrer">
-  <svg viewBox="0 0 32 32"><path fill="white" d="M16 2C8.268 2 2 8.268 2 16c0 2.49.638 4.83 1.757 6.865L2 30l7.331-1.724A13.916 13.916 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z"/><path fill="#25D366" d="M21.93 19.177c-.313-.157-1.852-.914-2.139-1.018-.286-.104-.494-.157-.703.157-.208.314-.807 1.018-.989 1.227-.183.208-.365.234-.678.078-.313-.157-1.322-.487-2.518-1.553-.93-.83-1.558-1.854-1.74-2.168-.183-.313-.019-.483.137-.639.141-.14.313-.365.47-.548.156-.183.208-.313.313-.522.104-.208.052-.391-.026-.548-.078-.157-.703-1.695-.963-2.322-.254-.61-.512-.527-.703-.537l-.6-.01c-.208 0-.548.078-.835.391-.286.313-1.096 1.07-1.096 2.609s1.122 3.026 1.279 3.235c.156.208 2.208 3.373 5.35 4.728.748.323 1.332.516 1.787.661.751.239 1.435.205 1.976.124.603-.09 1.852-.757 2.113-1.488.26-.731.26-1.358.183-1.488-.078-.131-.286-.209-.6-.366z"/></svg>
-</a>
-
-<!-- CHAT BTN -->
-<button id="chat-btn" onclick="toggleChat()" aria-label="Agente IA WHITEMOON"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAIAAADajyQQAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAAXHElEQVR4nK1be7BdVXn/fd9a+7zuIzf33iQkIeQBBAkUiIAxkAgdi4JW+7Dv2naUUttaW6e1M33I1M4wVmtnGKz2MR1fndZ2xNrntLSAUooCioAEAUmIeSf3Jvd9zr3n7L3X9/WPtfbjPHKJM665k5yz915rfe/v931rH3r7rncAEKgqiIgAAAoAIABK/pMWl7XnkfCvgv3/BIUCIA2LKUFVSYlA4ZZflaAKEGlp9W4S/AQt7qoFCBBPkZIolADNaFCAQASyAINA/kJGKTJ6if3zBD8lnx1IoOy7wn8L/4sCBFYQVClwosg2IaLwlUgzAQTSwi6cUSHZFEAVLCXZKpTI0+/pICUFkQJChkd65I/AtBc6Z/LzQmEvRcofBBTqJUXEUC8kzVbwd73IOBNuoXPNeNDwjYIaIcjFEbSc68VT4+nTXA2qCmL1G5LayNaoUBMFoZJ6+asqkRcpUdczCkCVkVFdiDxfLZ9GUAVlhgKwquYzFEpEIFUteUBGO5EG5oigQQBeOqqBkLChQlnCbYEFpLAxL3Vka5UWDkbiNw0kEPn9cgkqE7H3Jy/P0jRvIpotqaqU8VmWeyYOT7NqcDDN3DwwUUwJFuH3L+nPZs7qrbjsYuGiV1rPxUx3HDRcyJpyO+6f0rtX+bkgMk+fZo+XLHoQYcWaXbIBEdny12xRKnMygKtg8mEoMk/MbaKbhj6qiu2KoQQfVolyortp0B76PWHhSaZS7AQA20M99Uu7n8MgI+UBOi4TRH0fVh8DpJkF5OJ6D8/l2YTirqUuCQ2QFgYoDYBm/2a+DkAZ3+9BWdxXCBQg7VLU+TVhM0fMJNTtUcE3lEK47aHcRwnNNak9d78XDvJoMHgWgX2iCoHdB23qM/sSY913zmuKREQKKZbw+akvoJUGFw8DWeQsZmRbySr89JOBAFkUq1qpLd/o4eM8XxAidUimZc64e4aUJ6sGgFKyBy3xk/trLrt8uyL6Zek7ixzneUxVi+DhL4kIEXFACVAQsUPAFiDlLAF5dXGWvD2NIesWmSrPtiXqM4o0C4P5Laiqd1Tx1kYEuLJgC6DpoxeMFjYgZa3bMpcFhxmGIVKAc8CT0ZhJN9i6p6G0qmamohlooIASM7xAJTMuA58CcKrPzyXQ2KNJyrSmXZoLtyz1hYrss8cIosKkRFDKKclU0ZPxCvLARAFpKNRBCMQBQFE/Cuj+qiHJE6kG7KXay1UPG7lWcjaDKaoqs0fyDACsSgIFKZfhnw+LRH0qKoVTLwKnEBcnqqxci6pKKlJ2d1JS72E0KC8VMiAAECUFl/w2pydYJnngGjC4Fox5rlQzL8nRXzDCAtCXcU4PKb6CSCVRJxVTW1Nff/HIuuHGyNnmzJH5kw4pZXQgt8aMvB5qewYTiY9Uqj2Ok1PlZ6qK/2xzWjPvpwCmu4I5Bb/3+VFDVdolYDaJOEoxXl+7fXzLJaObJobGZ9qz3zz5/MnFKfFMZw8rQJKhwN7oKxqSI0koxnK0XHhp/wiwiz3eJ+vTE4ocX/IjZJbpi9IshOUW4r8awKkmqVvfGN217vItoxvrtiGkz51+6enT3+5ou2IrpkRQjukHUQaAPaAR1aqpOJXUpUSkogCIDRFEJNs+VBpKWUAONbevoEPB0gVVStrwWDzc9V8CcWAidFxS5doNG3funNxu2IrDcrr8xPFnDs0diyrVGtVUMqSQiSybDvUFvCq69E+irkLVWy6/4ZGDT+YPA73JqldYmskdsDlUH6RiHyOKusQbpK9/GCSMTpJsaqzfu/Xa8cpYkiYqknL8yNGvH29N1Wp1nyKIqdshNAMuMKBO3DGRjdhIVnwRIekkb71m/6Y1m9vxY8ZySACqVK4NiUJJ3oO2VUHkGzB9SEoJarxf5OU8KRjsuwUEVUaSdHauveS2y24as6PttANADT1+/NlTzXP1SkNVlVQpZAfN/iikEnIiE401N+/YXadKK1kRODZEhttJ+7Vbrn7dlusWl+cJYDIgBpjI+CRSUi4rTKhhvU16gKMZHi/r1H9iovOkKZCSsk2S9Op1l91yyQ0slErKoIqtPDf94sGl41GlKiI9+Yk8m5n9kMIaM704t3XdJb9y00/v237jiB2O43Y7Xtk2dvFtO/e6RDoSZ4Tl1sQAg7gUD/1tAjg02oiIqL/QIICIGXnlpqXrfhPmOE12TWx73ebdSQqBgFAx0YnW1PPnDtVshUTKoaFAJ/6PQnuLQULp117+xnBl+PYd+37pxh/dv2PPtqHNt191awWRU9dO3MDamTJ6sitM4OxruBjCvZSwElEJ7WneMsgiGVOcxjvWbLzxkt0SO6UQeNpwT59+ISWpwGbAsoe3ojAJqVqlaivHFqZemDq4a/LSOlfesOOG119yDcPEzjWsWXEdZzkyDJeVK4X0kWuSoESkCinlRp+Xy0rJsYwWqs8WUqZUZV11zU1bXouEHSkTA2qMfWX+6NmVmciaHsjbh5jKd1mVQfT1YwdSSgWIOzELqTiCCpNzLu50RITZgKkr4ykYlGe5nsSNLNaHIE6c2a6/hpIph/yiFnTDlmuq1EiRMkihBpxIcnjmCDORK5lOqX7t5ykUE9CqiU4snPn29MGqjYLwiYg5SZJrNl9+x5U3D5vacrySQNiYMj25dWWFXsBP/n4ePAjEqiE5EJiJy3BVQTCUuvjKycs2Dm1IXMxZkjBsplpnZ1cWjLFZPqJg+b0tkMJRkXsLkxK/cPxgquJxZp4zh01j/7brf+F1b3/j9tePot6J2zlICr6vRDBEXPTViVShCoayN8iSbLVH0EogRiIyXhm/anJnmqR5goRCCScWz6Tk+xFFLD1v1yWIUoN3qlbI7N56LWnvxqm45XY8ysO37dx717537N1+LQHExF0xr7DQcvq2GQorJ89CV34Sg4lI0vQ1my6tcxSnSTkNdNLOdGvOMOd1TX8rcuAgBTGtdDr7dly/a8O2dqcd+q1+Z6V6VFPFUtI8PH3i5PzU9MKs+gqFiAhStDyIwaJ58xwUomJvTO2iyWsgUTdZX7t9dGOaJkUNC7VkFztLrXiFuYiCF8IVADXUTuJLJzbftG33ykpCxkRsUnGAsnBC8tzJA4dnT51dnFnotDoaE2vVVIsgj3JxTkwkcP4LwzdMe2vNnq+AqnPp5esuqVOtjbjsecy0FLcSjS1FpcdXM8KwN1Hs0olo5I6rbq1zJa2gLSuz7cWx6igL2JhWu/ngi1+LkVZMZCwPoarwLbgSbd1NFwIkwzYWhaSpiBaU4WIiAE5k1NQvHt0Qi+vRBhE3XUcZxKR9NfpA1flaQoAqVW+56vWdNH18+lvTS+fOLs3NLS++7QduvWJ8m4OupB2ObM1EEEBFsonZ0r52Cigiy83sWwpCWmq/eV1lobOoCIlSlY0j69dEjU7axZjH6Z0kDjuWM/JALJZBF4VC1ETVJw8/P9ua77iOqlhjUsg3vntg+/jmKlUWO83UJZGpCLJY29f3zpw5l2gwuIAVs5K+SC89NbJR2jyygZT7o6WQ7yj1uuX5ucoKDKI4WZ5qTjly1ahSjaqRiWqmcnzh1KGZ49WoNr8y7/w5W3eZPGDNQddD3PSwPesulRUOEanb6mR9LOnuqBARiy+2GQqWEvQaOIo1icEEWGJDtspVEdm0+SJRIUCZv3ns+Y4mS+2VvAWds8Q5wNP82I6IKMclfka5udUXMMJVEueGo0Y9aohKV8pWBcCKCpnzMEPlkfW2CEqkrEwdkfXDExIn112/K0mTJEkVVLGVYwtTh+aOizrtL7MvYPi6pqsdMOgpCHRNbdSyHRjrSLVRqfbYaMZKlv3DH0EAISIjINeRK9dtbzWXX7P78o3rNhx95XitWs+b3U9895nZeMnCIqCMV8n16NGHgkm5K4Qw+RZWUc8pra2O0KC1QFDoSGWYyQoUygRDMDma6RMDEVMiCTu3Z/u1cewqE/Ynf+pHHnjgK0NDwyLCIAVbUzkxN316YcbaSEAgLh3HIm+/9HAVDNKTBeZVsLf/xxAPR0OQXgcDQCAnbk1laMTUVXVQdde1oBAliVtrh994xZ40SZ8788K99374v/7joWZr2diuuUSEUvLor3hzZ6b+ewCALiPqCuUAgQUwbBq2ej5jENWGqW4aXeckZR7QIgxlATSRxDjsWrv1TTtvWmivPHzw4T/7sz9ebDb/88GH146tdc6VyfA14UChBz769JapLlyxeQKi8KgWfTY4gIyx1kSSXerZA0AqsnNix4mFqVa6YqIIolmL0sN7iZ2zajaPXHT1uss2rVn/8sx3H3zxf3/iHT/x7jvfec3V+8caYyJSqvry1hpQPo0pM5r3tIujucAeQP5tj67zMSqzHA5P2IANc1cSKMkJgFMdpeE9l7z2yRPfWoxbxPCvHqgmJGyN3Tq87vK1Wy8aGq9Wqi/OHPnq4We2bLvos5/75J9//K+PHDuxaXJjnMQD0wQVLxoMLheo//yVQiSlNY1tKFmqZlLzLSohDFH19h37qhT1H2rk4kiVqsY03fLB2RPnVuZjiYm4YaqT9bGNo5NrKyOspNYcnD369NQLy+2l/37w/mt3X71r577lVmItqWSHMH7vsuwoDw9a5iGfkDVMtbiuQPl8LHzIT4BCqlOfhkOpXXq43NgypIlL6lTdvWFnKs6pI5A1lsAiTlKHin3p7Cvfnj0yv7j0wbvft+8Nez/64Xunz5ybnJxMkgQZVkdfYGeE7guUCOQ74yL5iS0FpSnlx9O+Z0lrGtvKmKWUE4hC6V69feu+IVt1+irHqZ6uAN68GFWZiSy+NXXo0MLxxVZr703XPfDQF5eWFm/ec8fU6flKpVJuB1JXu6V7cU8Yi3PSE1YC52WllQ9XS6MARgRKJEnE9Z9qDZ6WS963Q4xJWZ84+eK3Z48lKqOjtU/85UejyP7LPz9w+NCpeq2eHXyFlJ7npAEsAURIU5mcHLd2MFoojwJSZctRV/RhSl3ajJct8YVUWWGaEjvUTGVBWo8effro/KmhWmNpaemeP/mDK3ddIaJfvP/frfVOW8Z0TMRFeC5R5mG5iESRveUH98Rx7HOm5upCqUUQOilZVtDS6VO+lwch08vnLqjWBwCowhJRjQ4tnXj0u9+cThaqjcb8/Lk73nLrnXf9oqoefuXIU994Zmh4SGQQRiMolXbLW4OGl5aX9t9y465dVy60Fqw1OQ+9pKkSlfUwCJmrqjXmePPMkmtbMlA5H3sKKISAirWL2nni5AtPnDrQprTGUZLEQ2saH/nY3d6LvvbVJxfml6PIgkCDkA8VxRT5U3AlJbKpJL/xvl85dep0UX6d3+1Diz7HYEVLu/TEcrp84PR3yBoi60rerRCF+AhriKtc7bC8OHf0y0efOrx4MqpUmJgtzy/M/u4Hfv3KK6+I4wTAU089y2R9TevfoNIuyEIAZ/1oAhMI1pr5+dm3vuVNP/jG/Y999cm6bUgJ4vWUS16B2eE6oXifoXTbD2PsocUjOCHXbtw1wtVEJbzJwoZADE4hS0nr1OLM0fkzs8mSsVQzFRGw4VZzZffuXe/9zTvFSRRZAEeOHDfWhKZ6SPwEUkipYFUGhFhJFURJkg4N23vvu+fUqTMvv/RKvV4rH7f3O78CFnQ+GFgMUbWRObh44lx78dKxLRND4zUTgSAuXUnj+U5rujUzu7zQko5hU4mMChx7D+Y4ad/9od+pN+pp6qwxAJYWlxkMyd6uzDBcn1URIExMxHPzM3/zqXsvu2zH3/3tPywsNifXTiRpUtZBP2+2hLbyEN87CFClyNhm2np66juWI2sMCKouVXEqIFg2tSgSkVScYUNQayqLS/O3vXn/W9/2ZnHOGuODU71eURHOekxFfuh/mw+G2U7PnPmjP/rAu979cwAefvBRJtYs4/Xylr24C0UfIF91EBkTsZo00U6inRTOMKrGVI1hQpImFbXj9TXh6FGdMfj9P/ytzIfD2fGuq17jXJr32bsKxJJQjTEicnbmzAf/8P13f+h3VeX0qdNffvixocawOLzqyNNISAV5LuvfNVxBaFoYsFEGkRASkSRJJitrr7/4KgiJirXRwtLCm+64dc/eG0TEGJOv8OPv+GG2RdbqpYfIWGMju7DYTFz7vk/c86F7fi+O20T8hS/828nTU9VqpH1v6XSTSrR6adg/VFJVUahCRCVBnKYdpOm4Gb5uYufNW69rrTTPrsxYY0WVWH/tve9C+WiHjXPpTTff+J73vvPE9CmIjWxkrfHDWmMti+r8wtzs3PT+W69/6Ctf+vX3/nKaptZWVlban/n03zdqPh6+upn1vtaHQVoKXAGj9VFNXNulDGbDdVtZWx2daIxNVEfrVGmtrLw0d8xYY9g0W609e3a/4Za9ql3qYjai8qcf+9C6yYm//MTnps/MgIiZVSCaKNzY+Nhtb37Du979sz/6Y3cA5JwDiJk///f3HzjwnfUTATT3EFz4m2bF/9jIjuJSXp72MUngVPTi4fXXrN/ZbncYMNZW2EZkSUnEEfOh5snnZw9XrTWROXdu5uOfvOeu9/xC6lJresXno8iJ4yf/+4GvPP/8S3NzC9VKZf2G8Stec9me119/+eWXAQUSUtVms7n3xtuOH5up1SoixfltucLIvob+yACNDVaXImJzcnF6fWPdjqH1HecIUNFYE2UyTAQ3tTynDGWOk2TdhrV3vOU2+DP/vkFEzsnFWzbfedc7B+wlKirGGCJK09jaykc/fN/LLx+fHB9P0/QCCQ7gpRd4DqAFAMHiO+cOLaYrBDgVL1FSGGAuXpyPFyNmBi+3Oje+7rqLt1wkIudrFxnDKpqmqUtT55xzaZomLk1FhJi89TrnrK089n+Pf/y+T42PjaUuPb+j9FBL4Qxa/THg+Ub4vY1Y4mXXfnH2MFlmzexWQeCplflUUlJiUufim2/eA0Bk1dfxmKy1xhpj2BhrbWSszdOAiDDz3Ozcr73nAwRDhOKFkVcd+j2+d60Ka+2J5pmDi0cjGwXTJjjI/MqSl6aoRtZee91VuGDxDuymeP/51bt+5+BLx4caw85p/2OrjBJjF3hap2ps9PK5I8dap0PBR0gkabsOMQEkTuqN+qbNFyGziO91iKiIGmPe/74P/vOX/md87bhzsd/8whcpbZxFlgE2GY6+qHiS+cDZgyeb5yITkSIWiTX1v3cSdVFkG436KruuUrOKOCIYwx/47bv/4pOfmRifTNOkVJ1onp1XL3wHSPQCnVMYz5x76WjzdCXyfSZfJALgNHVxpzfb5GMVgtI0ZTZxnNx15/vvu/dTk5MTzqXfkwXmY3CH/cJmEgyenX35wLlXEk6ZfctCjTHLrZWTJ0+r6urv8paHc05UrLWvHDr81tt/5nOf/qcNExs0fbXziNXIy0c4ieg6uSlJtxfICIHUl2onD5x9hcJBJZiRxOlD//MoEZ2n+C/aKqrqnPPohIk/8+nP/9CtP/74Y8+um1yXuES7zsZWG74fmH9CjjzyVmH2y6kuOjIu8xd1qMAo/ozDCYg4u+Kcq9XNVx7710sv3ZYkCbMpt+I1DBCRMUGyjzzy1Y995BNffvDxocZwpWq9BWrWmgPU/85NVUGDfSxr3vuH6fvBWD4he1GYmZvN1lU/sPMf7/+rrdu2rCLpubmFLz/0v5/97P2PPvK4JDQ6OuQkVVXA5KR+PxiTcOZbnN/01EvI8VFWGZTfNCgJwhjTbLY2XDT2sz//Y/v2792yZXNjuG6tUdH5+aVTp8688MLLT3392W98/bmjR08YNqMjI0Sapnmlpdlbz5wxpgAURSk2ACiWfqtUAsGeLO1lDCXeyowBwfayFmzPD1uUjYk7ydJSq1KJhkeiarVuTSQqy8utZnOlEyfGmEZjqFatARCXdkcaydSVGUM3Y119/BJj+cX/BwK6vmuoV881AAAAAElFTkSuQmCC" alt="WM" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></button>
-</button>
-
-<!-- CHAT WINDOW -->
-<div id="chat-window">
-  <div id="chat-head">
-    <div class="ch-l">
-      <div class="ch-av"><img src="data:image/png;base64,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" alt="WM" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
-      <div><div class="ch-name">Agente IA · WHITEMOON</div><div class="ch-st"><span class="ch-dot"></span> En línea ahora</div></div>
-    </div>
-    <button id="chat-x" onclick="toggleChat()">✕</button>
-  </div>
-  <div id="chat-msgs"></div>
-  <div id="qr-wrap"></div>
-  <div id="chat-bar">
-    <input id="chat-in" type="text" placeholder="Escribe tu pregunta..." onkeypress="onKey(event)">
-    <button id="chat-go" onclick="send()">↑</button>
-  </div>
-  <div class="chat-ft">WhiteMoon Agencia de IA</div>
-</div>
-
 <!-- MODAL PACK -->
 <div id="pack-modal" class="mo" onclick="closePackOut(event)">
   <div class="mbox">
@@ -1628,136 +1554,6 @@ function toggleFaq(btn) {
   if (!open) item.classList.add('open');
 }
 
-// ── CHATBOT KB ──
-const KB = {
-  precios:{ kw:['precio','precios','cuanto','cuánto','cuesta','coste','tarifa','€','pack','plan'],
-    answer:`💰 <b>Nuestros planes:</b><br><br>🤖 <b>Pack Basic — 49€/mes</b><br>Setup 199€ + 199€/año mantenimiento. Chatbot IA informativo con menú de botones.<br><br>💬 <b>Pack Advance — 99€/mes</b><br>Chatbot conversacional con IA, escritura libre y cualificación de leads.<br><br>🏆 <b>Pack Pyme — 1.800€</b> <i>(setup único)</i><br>Web profesional + dominio + chatbot IA integrado. Mantenimiento 599€/año.<br><br>⚙️ <b>Pack Enterprise — 3.599€</b> + mantenimiento<br>Automatización N8N completa a medida.<br><br>📱 ¿Te interesa también la <b>gestión de RRSS con IA</b>?`,
-    replies:['Pack Basic 49€/mes','Pack Advance 99€/mes','Pack Pyme 1.800€','Pack Enterprise','Planes RRSS','Solicitar presupuesto'] },
-  basic:{ kw:['basic','básico','79'],
-    answer:`🤖 <b>Pack Basic — 49€/mes</b><br><br>→ Setup 120€ · Mantenimiento 89€/año<br>→ Chatbot IA en web o QR<br>→ Responde FAQs 24/7<br>→ Diseño con tu marca<br>→ Botón directo a WhatsApp<br>→ Sin permanencia · Activación 48h`,
-    replies:['Pedir info Pack Basic','Pack Advance 99€/mes','Pack Pyme 1.800€','Ver demo'] },
-  advance:{ kw:['advance','99','conversacional','libre'],
-    answer:`💬 <b>Pack Advance — 99€/mes</b><br><br>→ Setup 299€ · Mantenimiento 99€/año<br>→ Todo lo del Basic<br>→ Escritura libre del cliente<br>→ IA detecta intención<br>→ Cualificación de leads<br>→ Captación datos WhatsApp<br>→ Sin permanencia · Activación 48h`,
-    replies:['Pedir info Pack Advance','Pack Pyme 1.800€','Pack Enterprise','Ver demo'] },
-  pyme:{ kw:['pyme','web','página','pagina','dominio','1800','1.800','diseño','diseño web','página web'],
-    answer:`🏆 <b>Pack Pyme — 1.800€</b> <i>(setup único)</i><br><br>→ Diseño web profesional personalizado<br>→ Dominio incluido (1 año)<br>→ Chatbot IA conversacional integrado<br>→ Sistema de reservas con calendario y horas<br>→ Funciones Basic + Advance<br>→ Responsive y SEO básico<br><br>✅ Mantenimiento 599€/año: 299,50€ al activar + 299,50€ a los 6 meses`,
-    replies:['Pedir info Pack Pyme','Ver demo','Solicitar presupuesto','Hablar con el equipo'] },
-  enterprise:{ kw:['enterprise','3599','3.599','n8n','automatizacion','automatización','1399'],
-    answer:`⚙️ <b>Pack Enterprise</b><br><br>💳 Configuración: <b>3.599€</b><br>🔧 Mantenimiento: <b>1.399€/año</b><br><br>→ Flujos N8N completos a medida<br>→ Google Calendar automático<br>→ Emails + WhatsApp automáticos<br>→ Integraciones CRM/APIs<br>→ Soporte prioritario + informes`,
-    replies:['Solicitar presupuesto Enterprise','Hablar con el equipo'] },
-  rrss:{ kw:['rrss','redes sociales','redes','social','instagram','publicaciones','contenido','launchpack','accelerator','scalepack'],
-    answer:`📱 <b>Gestión de Redes Sociales con IA:</b><br><br>🚀 <b>LaunchPack — 99€/mes</b><br>→ 8 publicaciones/mes (2/semana)<br>→ Gestión de 1 red social<br>→ Contenido creado con IA<br>→ Publicación automática<br><br>⚡ <b>Accelerator Pack — 199€/mes</b><br>→ 12 publicaciones/mes (3/semana)<br>→ Gestión de 2 redes sociales<br>→ Contenido multi-formato + estudio de mercado<br><br>🏆 <b>Scale Pack — 399€/mes</b><br>→ 16 publicaciones/mes (4/semana)<br>→ Todas las redes + Google My Business<br>→ Revisión trimestral estratégica<br><br>* IVA no incluido · Sin permanencia`,
-    replies:['LaunchPack 99€/mes','Accelerator Pack 199€/mes','Scale Pack 399€/mes','Solicitar presupuesto RRSS'] },
-  servicios:{ kw:['servicio','haceis','ofreceis','ofrecéis','hacéis','que haceis','que ofreceis'],
-    answer:`🛠️ <b>Nuestros servicios:</b><br><br>📱 <b>Automatización WhatsApp Business</b> — chatbots que atienden, cualifican y cierran<br>🤖 <b>Chatbots IA con GPT-4</b> — asistentes inteligentes entrenados con tu negocio<br>⚙️ <b>Flujos automáticos con N8N</b> — conectamos todas tus herramientas<br>🌐 <b>Web + Chatbot IA integrado</b> — presencia online con IA desde el día 1<br>📱 <b>Gestión RRSS con IA</b> — contenido automático para tus redes sociales`,
-    replies:['¿Cuánto cuesta?','Planes RRSS','Pack Pyme 1.800€','Ver demo','Contactar'] },
-  demo:{ kw:['demo','demostración','probar','ejemplo','muestra'],
-    answer:`🎬 <b>Demo gratuita</b> sin compromiso.<br><br>Te enviamos la demo personalizada para tu sector. ¿A qué tipo de negocio perteneces?`,
-    replies:['🦷 Clínica dental','🍽️ Restaurante','🔧 Servicios del hogar','⚖️ Abogado / Despacho','💆 Estética y belleza','🏠 Inmobiliaria','🐾 Veterinaria','🎓 Academia / Formación','🚗 Taller mecánico','🏋️ Gimnasio / Fisio'] },
-  zona:{ kw:['majadahonda','rozas','boadilla','pozuelo','madrid','zona','donde'],
-    answer:`📍 Presencia local en:<br><br>🏘️ Majadahonda · Las Rozas<br>🏘️ Boadilla del Monte · Pozuelo<br>🏙️ Madrid capital<br><br>También 100% remoto en toda España.`,
-    replies:['¿Cuánto cuesta?','Contactar'] },
-  tiempo:{ kw:['tiempo','plazo','tarda','dias','días'],
-    answer:`⏱️ Tiempos de entrega:<br><br>→ Pack Basic / Advance: <b>48-72 horas</b><br>→ Pack Pyme (web + chatbot): <b>5-7 días hábiles</b><br>→ Pack Enterprise: <b>7-14 días hábiles</b><br><br>Incluye configuración, pruebas y formación.`,
-    replies:['¿Cuánto cuesta?','Contactar'] },
-  contacto:{ kw:['contacto','contactar','hablar','llamar','email'],
-    answer:`📞 <b>Contacto directo:</b><br><br>💬 <a href="https://wa.me/34643199580" target="_blank" style="color:#9d70ff;font-weight:600" rel="noopener noreferrer">WhatsApp: 643 199 580</a><br>📞 Llamada: 643 199 580<br>✉️ comercialwhitemoon@whitemoon.es`,
-    replies:['Abrir WhatsApp','Enviar email'] },
-  saludo:{ kw:['hola','buenas','hey','saludos','buenos'],
-    answer:`¡Hola! 👋 Soy el <b>Agente IA</b> de WHITEMOON.<br><br>Ayudo a pymes y autónomos a automatizar su negocio con inteligencia artificial. ¿En qué puedo ayudarte hoy?`,
-    replies:['¿Qué servicios ofrecéis?','¿Cuánto cuesta?','Planes RRSS','Ver demo','Contactar'] },
-  default:{ answer:`Soy el Agente IA de WHITEMOON. Puedo informarte sobre nuestros servicios de automatización, chatbots y diseño web con IA.<br><br>💬 <a href="https://wa.me/34643199580" target="_blank" style="color:#9d70ff;font-weight:600" rel="noopener noreferrer">WhatsApp: 643 199 580</a>`,
-    replies:['¿Qué servicios ofrecéis?','¿Cuánto cuesta?','Planes RRSS','Ver demo','Contactar'] }
-};
-
-const ACTIONS = {
-  'Abrir WhatsApp':()=>window.open('https://wa.me/34643199580','_blank'),
-  'Pedir demo por WhatsApp':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON,%20quiero%20una%20demo','_blank'),
-  '🦷 Clínica dental':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20quiero%20la%20demo%20para%20cl%C3%ADnica%20dental','_blank'),
-  '🍽️ Restaurante':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20quiero%20la%20demo%20para%20restaurante','_blank'),
-  '🔧 Servicios del hogar':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20quiero%20la%20demo%20para%20servicios%20del%20hogar','_blank'),
-  '⚖️ Abogado / Despacho':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20quiero%20la%20demo%20para%20despacho%20de%20abogados','_blank'),
-  '💆 Estética y belleza':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20quiero%20la%20demo%20para%20centro%20de%20est%C3%A9tica','_blank'),
-  '🏠 Inmobiliaria':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20quiero%20la%20demo%20para%20inmobiliaria','_blank'),
-  '🐾 Veterinaria':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20quiero%20la%20demo%20para%20veterinaria','_blank'),
-  '🎓 Academia / Formación':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20quiero%20la%20demo%20para%20academia','_blank'),
-  '🚗 Taller mecánico':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20quiero%20la%20demo%20para%20taller%20mec%C3%A1nico','_blank'),
-  '🏋️ Gimnasio / Fisio':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20quiero%20la%20demo%20para%20gimnasio%20o%20fisioterapia','_blank'),
-  'Solicitar presupuesto':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON,%20quiero%20un%20presupuesto','_blank'),
-  'Solicitar presupuesto Enterprise':()=>window.open('https://wa.me/34643199580?text=Pack%20Enterprise','_blank'),
-  'Solicitar presupuesto RRSS':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20planes%20de%20RRSS','_blank'),
-  'Hablar con el equipo':()=>window.open('https://wa.me/34643199580','_blank'),
-  'Pedir info Pack Basic':()=>window.open('https://wa.me/34643199580?text=Pack%20Basic%2049%E2%82%AC%2Fmes','_blank'),
-  'Pedir info Pack Advance':()=>window.open('https://wa.me/34643199580?text=Pack%20Advance%2099%E2%82%AC%2Fmes','_blank'),
-  'Pedir info Pack Pyme':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Pack%20Pyme%201.800%E2%82%AC','_blank'),
-  'LaunchPack 99€/mes':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20LaunchPack%20de%20RRSS%2099%E2%82%AC%2Fmes','_blank'),
-  'Accelerator Pack 199€/mes':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Accelerator%20Pack%20199%E2%82%AC%2Fmes','_blank'),
-  'Scale Pack 399€/mes':()=>window.open('https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Scale%20Pack%20399%E2%82%AC%2Fmes','_blank'),
-  'Planes RRSS':()=>{ const r=KB['rrss']; addMsg('bot',r.answer); if(r.replies) setQR(r.replies); },
-  'Enviar email':()=>window.open('mailto:comercialwhitemoon@whitemoon.es'),
-  'Contactar':()=>window.open('https://wa.me/34643199580','_blank'),
-  'Ver los planes':()=>{document.getElementById('precios').scrollIntoView({behavior:'smooth'});toggleChat();},
-  'Pack Pyme 1.800€':null,
-  'Pack Basic 49€/mes':null,
-  'Pack Advance 99€/mes':null,
-  'Pack Enterprise':null,
-};
-
-let chatOpen=false, inited=false;
-function toggleChat(){
-  chatOpen=!chatOpen;
-  const w=document.getElementById('chat-window');
-  w.style.display=chatOpen?'flex':'none';
-  if(chatOpen&&!inited){inited=true;initChat();}
-  if(chatOpen)setTimeout(()=>document.getElementById('chat-in').focus(),300);
-}
-function initChat(){
-  addMsg('bot','¡Hola! 👋 Soy el <b>Agente IA</b> de WHITEMOON.<br><br>Ayudo a pymes y autónomos a crecer con inteligencia artificial. ¿Qué te puedo contar?');
-  setQR(['¿Qué servicios ofrecéis?','¿Cuánto cuesta?','Pack Pyme 1.800€','Ver demo']);
-}
-function addMsg(who,html){
-  const c=document.getElementById('chat-msgs');
-  const d=document.createElement('div'); d.className='msg '+who;
-  const b=document.createElement('div'); b.className='bubble'; b.innerHTML=html;
-  d.appendChild(b); c.appendChild(d); c.scrollTop=c.scrollHeight;
-}
-function showTyping(){
-  const c=document.getElementById('chat-msgs');
-  const d=document.createElement('div'); d.className='msg bot'; d.id='typing';
-  d.innerHTML='<div class="typing-b"><div class="td"></div><div class="td"></div><div class="td"></div></div>';
-  c.appendChild(d); c.scrollTop=c.scrollHeight;
-}
-function hideTyping(){const t=document.getElementById('typing');if(t)t.remove();}
-function setQR(arr){
-  const w=document.getElementById('qr-wrap'); w.innerHTML='';
-  arr.forEach(l=>{
-    const b=document.createElement('button'); b.className='qr'; b.textContent=l;
-    b.onclick=()=>handleReply(l); w.appendChild(b);
-  });
-}
-function handleReply(l){
-  if(ACTIONS[l]&&typeof ACTIONS[l]==='function'){addMsg('user',l);setQR([]);ACTIONS[l]();return;}
-  processInput(l);
-}
-function getResponse(t){
-  const s=t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-  for(const[k,e]of Object.entries(KB)){
-    if(k==='default')continue;
-    if(e.kw&&e.kw.some(kw=>s.includes(kw)))return e;
-  }
-  return KB.default;
-}
-function processInput(t){
-  addMsg('user',t); setQR([]); showTyping();
-  setTimeout(()=>{
-    hideTyping();
-    const r=getResponse(t);
-    addMsg('bot',r.answer);
-    setQR(r.replies||['¿Cuánto cuesta?','Contactar']);
-  },(700+Math.random()*400));
-}
-function send(){const i=document.getElementById('chat-in');const t=i.value.trim();if(!t)return;i.value='';processInput(t);}
-function onKey(e){if(e.key==='Enter')send();}
 
 // ── PACKS MODAL ──
 const PACKS={
@@ -1958,5 +1754,240 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closePack();closeLe
     <p>WHITEMOON es la agencia líder en automatización con IA en el noroeste de Madrid. Especializados en chatbots WhatsApp para empresas, automatización de procesos con N8N, webs con chatbot IA integrado y embudos de venta inteligentes. Servicio presencial en Majadahonda, Las Rozas de Madrid, Boadilla del Monte, Pozuelo de Alarcón y Madrid capital. También servicio remoto en toda España.</p>
     <p>Nuestros servicios incluyen: chatbot WhatsApp para clínicas, chatbot WhatsApp para restaurantes, chatbot WhatsApp para inmobiliarias, automatización de citas, gestión automática de leads, integración con CRM HubSpot Salesforce y Zoho, automatización con Google Calendar, emails automáticos, marketing digital con IA.</p>
   </section>
+<!-- ═══════════════════════════════════════════════════════════
+     WHITEMOON - BOTÓN UNIFICADO IA
+     Un solo botón → 3 opciones: Voz IA, Chat IA, WhatsApp
+     ═══════════════════════════════════════════════════════════ -->
+<style>
+/* === BOTÓN PRINCIPAL FLOTANTE === */
+.wm-hub-wrap{position:fixed;bottom:24px;right:24px;z-index:99990;font-family:'Outfit','Inter','Segoe UI',sans-serif}
+.wm-hub-btn{width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#7c4dff,#5c35cc);border:2px solid rgba(201,168,104,.4);box-shadow:0 8px 32px rgba(124,77,255,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s;position:relative}
+.wm-hub-btn:hover{transform:scale(1.08);box-shadow:0 12px 40px rgba(124,77,255,.6)}
+.wm-hub-btn.open{transform:rotate(45deg);background:linear-gradient(135deg,#ef4444,#dc2626);border-color:rgba(239,68,68,.4)}
+.wm-hub-btn svg{width:28px;height:28px;fill:#fff;transition:transform .3s}
+.wm-hub-badge{position:absolute;top:-4px;right:-4px;background:#00d4aa;color:#000;font-size:.55rem;font-weight:800;padding:2px 6px;border-radius:8px;letter-spacing:.03em;animation:wm-badge-pulse 3s infinite}
+@keyframes wm-badge-pulse{0%,100%{opacity:1}50%{opacity:.6}}
+/* === MENÚ DESPLEGABLE === */
+.wm-hub-menu{position:fixed;bottom:96px;right:24px;width:300px;background:rgba(17,17,25,.97);backdrop-filter:blur(20px);border:1px solid rgba(124,77,255,.3);border-radius:20px;padding:0;box-shadow:0 24px 64px rgba(0,0,0,.6);color:#fff;z-index:99991;display:none;overflow:hidden}
+.wm-hub-menu.show{display:block;animation:wm-menu-in .25s ease-out}
+@keyframes wm-menu-in{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
+.wm-hub-header{padding:18px 20px 14px;border-bottom:1px solid rgba(255,255,255,.06)}
+.wm-hub-title{font-size:.92rem;font-weight:700;color:#fff;margin:0 0 2px}
+.wm-hub-sub{font-size:.72rem;color:#888;font-weight:400}
+/* === OPCIONES === */
+.wm-hub-opt{display:flex;align-items:center;gap:14px;padding:16px 20px;cursor:pointer;transition:all .2s;border-bottom:1px solid rgba(255,255,255,.04);text-decoration:none;color:#fff}
+.wm-hub-opt:last-child{border-bottom:none}
+.wm-hub-opt:hover{background:rgba(124,77,255,.1)}
+.wm-hub-opt:active{background:rgba(124,77,255,.2)}
+.wm-opt-icon{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.wm-opt-icon.voz{background:linear-gradient(135deg,#7c4dff,#5c35cc)}
+.wm-opt-icon.chat{background:linear-gradient(135deg,#6366f1,#4f46e5)}
+.wm-opt-icon.wa{background:linear-gradient(135deg,#22c55e,#16a34a)}
+.wm-opt-info{flex:1;min-width:0}
+.wm-opt-title{font-size:.88rem;font-weight:600;color:#fff;display:flex;align-items:center;gap:6px}
+.wm-opt-desc{font-size:.72rem;color:#999;margin-top:2px;line-height:1.4}
+.wm-opt-tag{font-size:.55rem;font-weight:700;background:rgba(0,212,170,.15);color:#00d4aa;padding:2px 7px;border-radius:6px;letter-spacing:.03em}
+.wm-opt-arrow{color:#555;font-size:.9rem;flex-shrink:0;transition:transform .2s}
+.wm-hub-opt:hover .wm-opt-arrow{transform:translateX(3px);color:#7c4dff}
+.wm-hub-footer{padding:10px 20px;text-align:center;font-size:.62rem;color:#555;border-top:1px solid rgba(255,255,255,.04)}
+/* === MODAL CHATBOT === */
+.wm-chat-modal{position:fixed;bottom:96px;right:24px;width:370px;height:520px;background:#111119;border:1px solid rgba(124,77,255,.3);border-radius:20px;box-shadow:0 24px 64px rgba(0,0,0,.6);z-index:99992;display:none;overflow:hidden;flex-direction:column}
+.wm-chat-modal.show{display:flex;animation:wm-menu-in .25s ease-out}
+.wm-chat-head{padding:14px 18px;background:linear-gradient(135deg,#6366f1,#4f46e5);display:flex;justify-content:space-between;align-items:center}
+.wm-chat-head-title{font-size:.9rem;font-weight:700;color:#fff}
+.wm-chat-close{background:none;border:none;color:rgba(255,255,255,.7);font-size:1.2rem;cursor:pointer;padding:4px 8px}
+.wm-chat-close:hover{color:#fff}
+.wm-chat-body{flex:1;overflow-y:auto;padding:16px;background:#0d0d18}
+.wm-chat-msg{max-width:82%;margin-bottom:10px;padding:11px 15px;font-size:.82rem;line-height:1.5;border-radius:14px 14px 14px 4px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.2);color:#e0e0e0;font-family:inherit;white-space:pre-line}
+.wm-chat-msg.user{background:linear-gradient(135deg,#6366f1,#4f46e5);color:#fff;margin-left:auto;border-radius:14px 14px 4px 14px;border:none}
+.wm-chat-input-wrap{padding:12px;border-top:1px solid rgba(255,255,255,.06);display:flex;gap:8px;background:#111119}
+.wm-chat-input{flex:1;background:#0d0d18;border:1px solid #2a2a3a;border-radius:20px;padding:10px 16px;font-size:.86rem;color:#fff;font-family:inherit;outline:none}
+.wm-chat-input:focus{border-color:#6366f1}
+.wm-chat-input::placeholder{color:#555}
+.wm-chat-send{width:40px;height:40px;border-radius:50%;background:#6366f1;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.wm-chat-send svg{width:16px;height:16px;fill:#fff}
+/* === RESPONSIVE === */
+@media(max-width:500px){
+  .wm-hub-menu,.wm-laura-modal{right:10px;left:10px;width:auto;bottom:90px}
+  .wm-chat-modal{right:0;left:0;bottom:0;width:100%;height:85vh;border-radius:20px 20px 0 0}
+  .wm-hub-wrap{bottom:16px;right:16px}
+  .wm-hub-btn{width:56px;height:56px}
+}
+</style>
+
+<!-- BOTÓN PRINCIPAL -->
+<div class="wm-hub-wrap">
+  <div class="wm-hub-btn" id="wmHubBtn">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span class="wm-hub-badge">IA</span>
+  </div>
+</div>
+
+<!-- MENÚ CON 3 OPCIONES -->
+<div class="wm-hub-menu" id="wmHubMenu">
+  <div class="wm-hub-header">
+    <div class="wm-hub-title">¿Cómo prefieres contactarnos?</div>
+    <div class="wm-hub-sub">Elige tu canal favorito</div>
+  </div>
+
+  <div class="wm-hub-opt" id="wmOptChat">
+    <div class="wm-opt-icon chat"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+    <div class="wm-opt-info">
+      <div class="wm-opt-title">Chat IA</div>
+      <div class="wm-opt-desc">Escribe tus dudas y el chatbot te responde al instante.</div>
+    </div>
+    <div class="wm-opt-arrow">›</div>
+  </div>
+  <a class="wm-hub-opt" id="wmOptWa" href="https://wa.me/34643199580?text=Hola%2C%20me%20interesa%20información%20sobre%20los%20servicios%20de%20WhiteMoon" target="_blank" rel="noopener">
+    <div class="wm-opt-icon wa"><svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></div>
+    <div class="wm-opt-info">
+      <div class="wm-opt-title">WhatsApp</div>
+      <div class="wm-opt-desc">Escríbenos directo. Respuesta en menos de 5 minutos.</div>
+    </div>
+    <div class="wm-opt-arrow">›</div>
+  </a>
+  <div class="wm-hub-footer">WhiteMoon · Agencia de IA · Majadahonda</div>
+</div>
+
+<!-- MODAL CHATBOT -->
+<div class="wm-chat-modal" id="wmChatModal">
+  <div class="wm-chat-head">
+    <span class="wm-chat-head-title">💬 Chat IA · WhiteMoon</span>
+    <button class="wm-chat-close" id="wmChatClose">✕</button>
+  </div>
+  <div class="wm-chat-body" id="wmChatBody">
+    <div class="wm-chat-msg">¡Hola! Soy el asistente IA de WhiteMoon. 👋
+
+¿Sobre qué servicio te gustaría saber más?
+
+• Chatbot IA para tu web
+• Agente de voz IA
+• Gestión de RRSS con IA
+• Web profesional con IA</div>
+  </div>
+  <div class="wm-chat-input-wrap">
+    <input class="wm-chat-input" id="wmChatInput" type="text" placeholder="Escribe tu mensaje...">
+    <button class="wm-chat-send" id="wmChatSend"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+  </div>
+</div>
+
+<!-- SCRIPTS DEL HUB -->
+<!-- Script CLÁSICO: lógica del hub (funciona siempre, sin depender de CDN) -->
+<script>
+(function(){
+  var isOnCall = false;
+
+  function getEl(id){ return document.getElementById(id); }
+
+  function wmToggleHub(){
+    var menu = getEl('wmHubMenu');
+    var btn = getEl('wmHubBtn');
+    if(!menu || !btn) return;
+    var isOpen = menu.classList.contains('show');
+    wmCloseAll();
+    if(!isOpen){
+      menu.classList.add('show');
+      btn.classList.add('open');
+    }
+  }
+
+  function wmCloseAll(){
+    var m = getEl('wmHubMenu'); if(m) m.classList.remove('show');
+    var l = getEl('wmLauraModal'); if(l) l.classList.remove('show');
+    var c = getEl('wmChatModal'); if(c) c.classList.remove('show');
+    var b = getEl('wmHubBtn');
+    if(b && !isOnCall) b.classList.remove('open');
+  }
+
+
+  function wmOpenChat(){
+    var m = getEl('wmHubMenu'); if(m) m.classList.remove('show');
+    var c = getEl('wmChatModal'); if(c) c.classList.add('show');
+  }
+
+  function wmBackToMenu(){
+    if(isOnCall) return;
+    var l = getEl('wmLauraModal'); if(l) l.classList.remove('show');
+    var c = getEl('wmChatModal'); if(c) c.classList.remove('show');
+    var m = getEl('wmHubMenu'); if(m) m.classList.add('show');
+  }
+
+  
+  /* ── CHATBOT BÁSICO ── */
+  var chatKB = {
+    advance: { kw:['advance','99','chatbot','bot'], answer:'🤖 <b>Pack Advance</b> — 99€/mes + 299€ setup<br><br>Chatbot IA conversacional para tu web. El cliente escribe libremente y la IA responde 24/7. Cualifica leads y envía datos por WhatsApp.<br><br>Sin permanencia. Activo en 48-72h.' },
+    pyme: { kw:['pyme','web','1800','1.800','pagina','página','dominio'], answer:'🏆 <b>Pack Pyme</b> — 1.800€ pago único<br><br>Web profesional + dominio + chatbot IA + reservas. Todo incluido. Operativo en 5-7 días.<br><br>Mantenimiento: 599€/año.' },
+    enterprise: { kw:['enterprise','2500','2.500','3599','n8n','automatizacion','automatización'], answer:'⚙️ <b>Pack Enterprise</b> — desde 3.599€<br><br>Automatización completa con N8N: Google Calendar, emails, WhatsApp automáticos, CRM. Presupuesto según complejidad.<br><br>Mantenimiento: 1.399€/año.' },
+    voz: { kw:['voz','llamada','telefono','teléfono','agente','laura','1299','1.299'], answer:'🎙️ <b>Pack Agente Voz IA</b> — 1.299€ setup + 99€/mes<br><br>Agente que atiende llamadas 24/7 con voz natural. 300 min incluidos. Extra: 0,25€/min.<br><br>Escríbenos por WhatsApp para una demo personalizada.' },
+    rrss: { kw:['rrss','redes','instagram','facebook','social','publicaciones'], answer:'📱 <b>Gestión RRSS con IA</b><br><br>LaunchPack: 99€/mes (1 red, 8 posts)<br>Accelerator: 199€/mes (2 redes, 12 posts)<br>Scale: 399€/mes (todas + GMB, 16 posts)<br><br>Sin permanencia.' },
+    precio: { kw:['precio','cuanto','cuesta','coste','tarifa','presupuesto'], answer:'💰 <b>Nuestros precios</b> (sin IVA):<br><br>• Chatbot IA: desde 99€/mes<br>• Web + Chatbot: 1.800€ único<br>• Agente Voz IA: 1.299€ + 99€/mes<br>• RRSS: desde 99€/mes<br>• Enterprise: desde 3.599€<br><br>Todos sin permanencia. ¿Cuál te interesa?' },
+    contacto: { kw:['contacto','hablar','reunion','reunión','cita','whatsapp','llamar'], answer:'📞 <b>Contacta con nosotros</b><br><br>WhatsApp: <a href="https://wa.me/34643199580" target="_blank" style="color:#00d4aa">643 199 580</a><br>Respuesta en menos de 5 min.<br><br>Cristóbal te atiende personalmente y agenda reunión.' },
+    hola: { kw:['hola','buenas','hey','buenos'], answer:'¡Hola! 👋 Soy el chatbot de WhiteMoon.<br><br>¿Qué te interesa saber?<br>• Chatbot IA para web<br>• Agente de voz IA<br>• Gestión de RRSS<br>• Precios<br>• Hablar con el equipo' }
+  };
+
+  function chatMatch(t){
+    t = t.toLowerCase();
+    for(var k in chatKB){
+      var p = chatKB[k];
+      for(var i=0;i<p.kw.length;i++){
+        if(t.indexOf(p.kw[i]) !== -1) return p.answer;
+      }
+    }
+    return '🤔 No estoy seguro de entender la consulta.<br><br>Puedes preguntar sobre:<br>• <b>Chatbot IA</b> (Pack Advance)<br>• <b>Web + IA</b> (Pack Pyme)<br>• <b>Agente voz IA</b><br>• <b>RRSS con IA</b><br>• <b>Precios</b><br>• <b>Contacto</b><br><br>O escríbenos directo por WhatsApp — te atendemos en menos de 5 min.';
+  }
+
+  function addChatMsg(html, isUser){
+    var body = getEl('wmChatBody'); if(!body) return;
+    var div = document.createElement('div');
+    div.className = 'wm-chat-msg' + (isUser ? ' user' : '');
+    if(isUser){
+      div.textContent = html;
+    } else {
+      div.innerHTML = html;
+    }
+    body.appendChild(div);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function wmChatSend(){
+    var inp = getEl('wmChatInput'); if(!inp) return;
+    var msg = inp.value.trim();
+    if(!msg) return;
+    inp.value = '';
+    addChatMsg(msg, true);
+    setTimeout(function(){ addChatMsg(chatMatch(msg), false); }, 600);
+  }
+
+  /* ── Registrar listeners cuando el DOM esté listo ── */
+  function wmBind(id, ev, fn){
+    var el = getEl(id);
+    if(el) el.addEventListener(ev, fn);
+  }
+
+  function wmInit(){
+    wmBind('wmHubBtn', 'click', wmToggleHub);
+    wmBind('wmOptChat', 'click', wmOpenChat);
+    wmBind('wmOptWa', 'click', wmCloseAll);
+    wmBind('wmChatClose', 'click', wmBackToMenu);
+    wmBind('wmChatSend', 'click', wmChatSend);
+    wmBind('wmChatInput', 'keydown', function(e){ if(e.key==='Enter') wmChatSend(); });
+
+    /* Cerrar al hacer clic fuera */
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.wm-hub-wrap') && !e.target.closest('.wm-hub-menu') && !e.target.closest('.wm-laura-modal') && !e.target.closest('.wm-chat-modal')){
+        if(!isOnCall) wmCloseAll();
+      }
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', wmInit);
+  } else {
+    wmInit();
+  }
+
+  })();
+</script>
+
 </body>
 </html>
