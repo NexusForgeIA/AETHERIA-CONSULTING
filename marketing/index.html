@@ -117,6 +117,9 @@
     --border:rgba(124,77,255,0.18);
     --hair:rgba(255,255,255,0.07);
     --shell:1180px;
+    /* Altura real de la navbar de wm-nav.css. Va fija sobre el contenido
+       (mismo patron que la home), asi que hay que reservarle el hueco. */
+    --navh:64px;
     --ease:cubic-bezier(.22,.61,.36,1);
     /* Escala z semántica: nada de 999 sueltos. */
     --z-mock:1; --z-badge:2; --z-nav:200;
@@ -139,6 +142,9 @@
   .sec{padding:clamp(72px,9vw,120px) 0}
   .sec--tight{padding:clamp(56px,6vw,84px) 0}
   .rule{border:0;border-top:1px solid var(--hair);margin:0}
+  /* Las anclas del indice del hero (#captacion-ia, #auditoria-ia, #reels-ia)
+     y las del menu aterrizaban debajo de la barra. */
+  section[id],article[id]{scroll-margin-top:calc(var(--navh) + 18px)}
 
   /* ── Tipografía ─────────────────────────────────────────────────────── */
   h1,h2,h3{text-wrap:balance;letter-spacing:-.03em;line-height:1.12;font-weight:700}
@@ -171,7 +177,7 @@
   .btn--sm{padding:11px 18px;font-size:.85rem}
 
   /* ── Hero ───────────────────────────────────────────────────────────── */
-  .hero{position:relative;padding:clamp(64px,8vw,110px) 0 clamp(64px,8vw,104px);overflow:hidden}
+  .hero{position:relative;padding:calc(var(--navh) + clamp(64px,8vw,110px)) 0 clamp(64px,8vw,104px);overflow:hidden}
   .hero::before{
     content:"";position:absolute;inset:-30% -10% auto -10%;height:520px;
     background:radial-gradient(60% 60% at 22% 0%,rgba(124,77,255,.20),transparent 70%),
@@ -372,6 +378,7 @@
     .band .btns{justify-content:flex-start}
   }
   @media(max-width:600px){
+    :root{--navh:60px}
     .shell{padding:0 18px}
     .sec{padding:clamp(56px,12vw,72px) 0}
     .tiers{grid-template-columns:1fr}
@@ -412,7 +419,7 @@
 <body>
 
 <!-- WM-NAV · navbar unificada · markup generado por scripts/nav_rebuild.py -->
-<nav class="wm-nav wm-nav--flow" aria-label="Navegación principal">
+<nav class="wm-nav" aria-label="Navegación principal">
   <div class="wm-nav__row">
     <a class="wm-nav__logo" href="/">
       <img src="/assets/images/icono-44.webp" srcset="/assets/images/icono-44.webp 1x, /assets/images/icono-80.webp 2x" alt="WhiteMoon" width="28" height="28" loading="eager" decoding="async">
