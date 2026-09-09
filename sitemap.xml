@@ -544,6 +544,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Marketing y captacion con IA -->
+  <url>
+    <loc>https://whitemoon.es/marketing/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <url>
     <loc>https://whitemoon.es/pack-ads/</loc>
     <lastmod>2026-06-11</lastmod>

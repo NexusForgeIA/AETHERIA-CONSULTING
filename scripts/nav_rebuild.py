@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Aplica la navbar unificada de WhiteMoon al header de todas las paginas de paseo.
 
-Menu resultante:  Servicios (desplegable corto) · Desarrollo web · Demos ·
-                  Precios · Recursos · Contacto + un unico CTA:
+Menu resultante:  Servicios (desplegable corto) · Desarrollo web · Marketing ·
+                  Demos · Precios · Recursos · Contacto + un unico CTA:
                   "Auditoria GEO/SEO Gratis".
 "Agendar reunion" baja a enlace de texto secundario.
 
@@ -46,7 +46,8 @@ EXCLUDE = {
 
 # Paginas cuyo header vivia en el flujo del documento (sticky). Ahi la navbar
 # tiene que seguir siendo sticky: si pasa a fixed, tapa el primer bloque.
-FLOW_PAGES_EXTRA = {"blog/index.html", "demos/index.html", "pack-ads/index.html"}
+FLOW_PAGES_EXTRA = {"blog/index.html", "demos/index.html", "pack-ads/index.html",
+                    "marketing/index.html"}
 
 NAV_RX = re.compile(r"<nav\b[^>]*>.*?</nav>", re.S | re.I)
 FOOTER_OPEN_RX = re.compile(r"<footer\b[^>]*>", re.I)
@@ -95,6 +96,7 @@ def nav_html(flow: bool) -> str:
         </div>
       </div>
       <a href="/diseno-web-con-ia/">Desarrollo web</a>
+      <a href="/marketing/">Marketing</a>
       <a href="/demos/">Demos</a>
       <a href="/precios/">Precios</a>
       <a href="/recursos/">Recursos</a>
@@ -114,6 +116,7 @@ def nav_html(flow: bool) -> str:
   <button class="wm-drawer__close" type="button" aria-label="Cerrar menú">{CLOSE}</button>
   <a class="wm-drawer__link" href="/servicios/">Servicios</a>
   <a class="wm-drawer__link" href="/diseno-web-con-ia/">Desarrollo web</a>
+  <a class="wm-drawer__link" href="/marketing/">Marketing</a>
   <a class="wm-drawer__link" href="/demos/">Demos</a>
   <a class="wm-drawer__link" href="/precios/">Precios</a>
   <a class="wm-drawer__link" href="/recursos/">Recursos</a>
@@ -135,6 +138,7 @@ FOOTER_NAV = """
         <li><a href="/atencion-cliente-ia/">Atención al cliente IA</a></li>
         <li><a href="/costes-eficiencia-empresarial-ia/">Reducción de costes</a></li>
         <li><a href="/coste-no-automatizar/">Coste de no automatizar</a></li>
+        <li><a href="/marketing/">Marketing con IA</a></li>
         <li><a href="/auditoria-geo-ia/">Auditoría GEO IA</a></li>
         <li><a href="/automatizaciones/">Automatizaciones</a></li>
         <li><a href="/servicios/">Ver todos los servicios</a></li>
@@ -286,9 +290,15 @@ def replace_nav(html: str, rel: str) -> str:
     return NAV_RX.sub(lambda m: block, html, count=1)
 
 
+# El bloque ya inyectado en pasadas anteriores. Se localiza para poder
+# SUSTITUIRLO: mientras esto solo insertaba, tocar FOOTER_NAV no cambiaba nada
+# en las 111 paginas que ya lo tenian, y la constante se iba quedando vieja.
+FOOTER_NAV_RX = re.compile(r'\n  <div class="wm-fnav">.*?\n  </div>\n', re.S)
+
+
 def add_footer_nav(html: str) -> str:
     if "wm-fnav" in html:
-        return html
+        return FOOTER_NAV_RX.sub(lambda m: FOOTER_NAV, html, count=1)
     m = FOOTER_OPEN_RX.search(html)
     if not m:
         return html

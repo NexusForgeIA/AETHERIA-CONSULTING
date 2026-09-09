@@ -94,6 +94,7 @@
         </div>
       </div>
       <a href="/diseno-web-con-ia/">Desarrollo web</a>
+      <a href="/marketing/">Marketing</a>
       <a href="/demos/">Demos</a>
       <a href="/precios/">Precios</a>
       <a href="/recursos/">Recursos</a>
@@ -113,6 +114,7 @@
   <button class="wm-drawer__close" type="button" aria-label="Cerrar menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
   <a class="wm-drawer__link" href="/servicios/">Servicios</a>
   <a class="wm-drawer__link" href="/diseno-web-con-ia/">Desarrollo web</a>
+  <a class="wm-drawer__link" href="/marketing/">Marketing</a>
   <a class="wm-drawer__link" href="/demos/">Demos</a>
   <a class="wm-drawer__link" href="/precios/">Precios</a>
   <a class="wm-drawer__link" href="/recursos/">Recursos</a>
@@ -1335,6 +1337,338 @@
     </div>
   </section>
 
+
+  <!-- MARKETING Y CAPTACIÓN CON IA
+       Grupo aparte: son servicios PUNTUALES (pago único), no packs del catálogo
+       CDN. Por eso no tocan el CHECK de onboarding_clientes.pack ni ningún
+       select del panel. Cada card enlaza a /marketing/, que es su página. -->
+  <section id="marketing-captacion" class="sec">
+    <div class="wrap">
+      <div class="hdr c">
+        <h2 class="sec-h">Marketing y captación con IA</h2>
+        <p class="sec-sub" style="max-width:760px;margin:14px auto 0">Trabajos puntuales de pago único para traer clientes: diagnóstico, contenido y captación. No llevan cuota mensual ni permanencia. Todos se explican en detalle en <a href="/marketing/" style="color:#b39dff;text-decoration:none;border-bottom:1px solid rgba(157,112,255,.4)">Marketing con IA</a>.</p>
+      </div>
+
+      <style>
+        .pg-mkt{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;max-width:1200px;margin:0 auto}
+        .pg-mkt > div{height:100%;display:flex;flex-direction:column}
+        .pg-mkt > div > div:first-child{flex-shrink:0}
+        .pg-mkt > div > div:last-child{flex:1 1 auto;display:flex;flex-direction:column}
+        .pg-mkt > div > div:last-child > div:last-of-type{flex:1 1 auto}
+        @media(max-width:900px){.pg-mkt{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:600px){.pg-mkt{grid-template-columns:1fr}}
+      </style>
+      <div class="pg-mkt">
+
+      <!-- AUDITORÍA IA -->
+      <div style="background:var(--card, #0d0d1a);
+        border:1px solid rgba(139,92,246,.3);
+        border-radius:20px;overflow:hidden;
+        box-shadow:0 20px 60px rgba(0,0,0,.5);
+        transition:transform .3s;position:relative">
+
+        <div style="height:220px;overflow:hidden;position:relative;
+          background:radial-gradient(120% 90% at 50% 8%,rgba(124,77,255,.20),transparent 70%),
+                     linear-gradient(165deg,#101019 0%,#0a0a11 100%);
+          display:flex;align-items:center;justify-content:center">
+          <svg viewBox="0 0 320 150" aria-hidden="true" focusable="false" style="width:78%;height:auto">
+            <g transform="translate(64,75)">
+              <circle r="42" fill="none" stroke="rgba(124,77,255,.18)" stroke-width="9"/>
+              <circle r="42" fill="none" stroke="#00d4aa" stroke-width="9" stroke-linecap="round"
+                      transform="rotate(-90)" stroke-dasharray="263.9" stroke-dashoffset="100.3"/>
+              <text x="0" y="5" text-anchor="middle" fill="#f0f0f5" font-family="Sora,sans-serif" font-size="26" font-weight="700">62</text>
+              <text x="0" y="21" text-anchor="middle" fill="#6c6c86" font-family="Sora,sans-serif" font-size="9">de 100</text>
+            </g>
+            <g transform="translate(130,36)">
+              <circle cx="7" cy="7" r="7" fill="rgba(0,212,170,.14)"/>
+              <path d="M4 7.2 l2.3 2.3 4-4.4" stroke="#00d4aa" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="21" y="3" width="110" height="6" rx="3" fill="#2f2f42"/>
+              <rect x="21" y="13" width="74" height="5" rx="2.5" fill="#20202c"/>
+              <g transform="translate(0,30)">
+                <circle cx="7" cy="7" r="7" fill="rgba(0,212,170,.14)"/>
+                <path d="M4 7.2 l2.3 2.3 4-4.4" stroke="#00d4aa" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="21" y="3" width="130" height="6" rx="3" fill="#2f2f42"/>
+                <rect x="21" y="13" width="58" height="5" rx="2.5" fill="#20202c"/>
+              </g>
+              <g transform="translate(0,60)">
+                <circle cx="7" cy="7" r="7" fill="rgba(124,77,255,.16)"/>
+                <path d="M4.7 4.7 l4.6 4.6 M9.3 4.7 l-4.6 4.6" stroke="#9d70ff" stroke-width="1.7" stroke-linecap="round"/>
+                <rect x="21" y="3" width="120" height="6" rx="3" fill="#2f2f42"/>
+                <rect x="21" y="13" width="86" height="5" rx="2.5" fill="#20202c"/>
+              </g>
+            </g>
+          </svg>
+          <div style="position:absolute;top:16px;left:16px;
+            background:linear-gradient(135deg,#7c3aed,#5b21b6);
+            color:#fff;font-size:.62rem;font-weight:700;
+            padding:4px 12px;border-radius:10px;
+            letter-spacing:.08em">PAGO ÚNICO</div>
+        </div>
+
+        <div style="padding:28px">
+          <div style="font-size:.7rem;font-weight:700;
+            letter-spacing:.15em;text-transform:uppercase;
+            color:#c0b0ff;margin-bottom:8px">POR DÓNDE EMPEZAR</div>
+          <div style="font-family:'Syne',sans-serif;
+            font-size:1.4rem;font-weight:800;
+            color:#fff;margin-bottom:6px">Auditoría IA</div>
+          <div style="font-size:.82rem;color:#9090b0;
+            margin-bottom:20px;line-height:1.5">
+            Diagnóstico de tu presencia online: ficha de Google
+            Business, web, redes, competencia y visibilidad en IA.
+            Dos niveles del mismo análisis.</div>
+          <div style="font-family:'Syne',sans-serif;
+            font-size:2.4rem;font-weight:800;color:#fff;
+            margin-bottom:4px;line-height:1">
+            250€<span style="font-size:1rem;color:#9090b0;
+            font-weight:400"> Básica</span></div>
+          <div style="font-size:.72rem;color:#9090b0;
+            margin-bottom:20px">899€ la Pro · Pago único · Sin permanencia</div>
+          <div style="display:flex;flex-direction:column;
+            gap:9px;margin-bottom:24px">
+            <div style="display:flex;align-items:flex-start;gap:9px;
+              font-size:.8rem;color:#e0e0f4">
+              <svg viewBox="0 0 24 24" style="width:15px;height:15px;
+                stroke:#22c55e;fill:none;stroke-width:2.5;flex-shrink:0;margin-top:3px">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>Básica: 20 acciones priorizadas, informe PDF y llamada de 15 minutos, en 24-48 h</div>
+            <div style="display:flex;align-items:flex-start;gap:9px;
+              font-size:.8rem;color:#e0e0f4">
+              <svg viewBox="0 0 24 24" style="width:15px;height:15px;
+                stroke:#22c55e;fill:none;stroke-width:2.5;flex-shrink:0;margin-top:3px">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>Pro: análisis manual de keywords, competidores, Google Business, E-E-A-T, backlinks y cluster de contenidos</div>
+            <div style="display:flex;align-items:center;gap:9px;
+              font-size:.8rem;color:#e0e0f4">
+              <svg viewBox="0 0 24 24" style="width:15px;height:15px;
+                stroke:#22c55e;fill:none;stroke-width:2.5;flex-shrink:0">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>La Básica es el nivel 1 y la Pro el nivel 2</div>
+          </div>
+          <a href="/marketing/#auditoria-ia"
+            onclick="wmTrack&amp;&amp;wmTrack('click_pack_marketing',{pack:'auditoria-ia'})"
+            style="display:flex;align-items:center;
+            justify-content:center;gap:8px;
+            padding:13px;width:100%;
+            background:linear-gradient(135deg,#7c3aed,#5b21b6);
+            border:0;border-radius:10px;color:#fff;text-decoration:none;
+            font-weight:700;font-size:.84rem;
+            transition:all .25s">
+            Ver la Auditoría IA →
+          </a>
+        </div>
+      </div>
+
+      <!-- PACK REELS IA -->
+      <div style="background:var(--card, #0d0d1a);
+        border:1px solid rgba(139,92,246,.3);
+        border-radius:20px;overflow:hidden;
+        box-shadow:0 20px 60px rgba(0,0,0,.5);
+        transition:transform .3s;position:relative">
+
+        <div style="height:220px;overflow:hidden;position:relative;
+          background:radial-gradient(120% 90% at 50% 8%,rgba(124,77,255,.20),transparent 70%),
+                     linear-gradient(165deg,#101019 0%,#0a0a11 100%);
+          display:flex;align-items:center;justify-content:center">
+          <svg viewBox="0 0 300 240" aria-hidden="true" focusable="false" style="width:auto;height:86%">
+            <defs>
+              <clipPath id="pr-reel"><rect x="80" y="26" width="140" height="196" rx="10"/></clipPath>
+            </defs>
+            <rect x="72" y="14" width="156" height="220" rx="22" fill="#15151f" stroke="rgba(255,255,255,.11)"/>
+            <rect x="80" y="26" width="140" height="196" rx="10" fill="#0b0b12"/>
+            <rect x="132" y="19" width="36" height="5" rx="2.5" fill="#0b0b12"/>
+            <g clip-path="url(#pr-reel)">
+              <rect x="90" y="52" width="40" height="71" rx="5" fill="#1c1430"/>
+              <rect x="134" y="52" width="32" height="71" rx="5" fill="#122a26"/>
+              <rect x="174" y="52" width="36" height="71" rx="5" fill="#1a1a26"/>
+              <rect x="90" y="136" width="120" height="8" rx="4" fill="#2c2c3e"/>
+              <rect x="90" y="150" width="86" height="8" rx="4" fill="#22222e"/>
+              <rect x="90" y="176" width="92" height="20" rx="6" fill="#7c4dff"/>
+              <rect x="100" y="183" width="60" height="6" rx="3" fill="#e6dcff"/>
+              <rect x="90" y="34" width="30" height="10" rx="5" fill="#1a1a26"/>
+              <text x="105" y="42" text-anchor="middle" fill="#9090b0" font-family="Sora,sans-serif" font-size="7">9:16</text>
+            </g>
+            <circle cx="150" cy="88" r="23" fill="rgba(8,8,13,.72)" stroke="rgba(255,255,255,.22)"/>
+            <path d="M144 79 l16 9 -16 9z" fill="#f0f0f5"/>
+          </svg>
+          <div style="position:absolute;top:16px;left:16px;
+            background:linear-gradient(135deg,#7c3aed,#5b21b6);
+            color:#fff;font-size:.62rem;font-weight:700;
+            padding:4px 12px;border-radius:10px;
+            letter-spacing:.08em">PAGO ÚNICO</div>
+        </div>
+
+        <div style="padding:28px">
+          <div style="font-size:.7rem;font-weight:700;
+            letter-spacing:.15em;text-transform:uppercase;
+            color:#c0b0ff;margin-bottom:8px">CONTENIDO PARA PUBLICAR</div>
+          <div style="font-family:'Syne',sans-serif;
+            font-size:1.4rem;font-weight:800;
+            color:#fff;margin-bottom:6px">Pack Reels IA</div>
+          <div style="font-size:.82rem;color:#9090b0;
+            margin-bottom:20px;line-height:1.5">
+            Cinco vídeos verticales listos para subir a Instagram,
+            TikTok y YouTube Shorts. Producidos con IA y
+            guionizados por nosotros.</div>
+          <div style="font-family:'Syne',sans-serif;
+            font-size:2.4rem;font-weight:800;color:#fff;
+            margin-bottom:4px;line-height:1">
+            450€<span style="font-size:1rem;color:#9090b0;
+            font-weight:400"> pago único</span></div>
+          <div style="font-size:.72rem;color:#9090b0;
+            margin-bottom:20px">Entrega en 48-72 h · Sin permanencia</div>
+          <div style="display:flex;flex-direction:column;
+            gap:9px;margin-bottom:24px">
+            <div style="display:flex;align-items:center;gap:9px;
+              font-size:.8rem;color:#e0e0f4">
+              <svg viewBox="0 0 24 24" style="width:15px;height:15px;
+                stroke:#22c55e;fill:none;stroke-width:2.5;flex-shrink:0">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>5 Reels verticales en formato 9:16</div>
+            <div style="display:flex;align-items:center;gap:9px;
+              font-size:.8rem;color:#e0e0f4">
+              <svg viewBox="0 0 24 24" style="width:15px;height:15px;
+                stroke:#22c55e;fill:none;stroke-width:2.5;flex-shrink:0">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>Guion, hook, subtítulos y CTA en cada pieza</div>
+            <div style="display:flex;align-items:center;gap:9px;
+              font-size:.8rem;color:#e0e0f4">
+              <svg viewBox="0 0 24 24" style="width:15px;height:15px;
+                stroke:#22c55e;fill:none;stroke-width:2.5;flex-shrink:0">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>Un Reel de muestra gratis antes de contratar</div>
+          </div>
+          <a href="/marketing/#reels-ia"
+            onclick="wmTrack&amp;&amp;wmTrack('click_pack_marketing',{pack:'reels-ia'})"
+            style="display:flex;align-items:center;
+            justify-content:center;gap:8px;
+            padding:13px;width:100%;
+            background:linear-gradient(135deg,#7c3aed,#5b21b6);
+            border:0;border-radius:10px;color:#fff;text-decoration:none;
+            font-weight:700;font-size:.84rem;
+            transition:all .25s">
+            Ver el Pack Reels IA →
+          </a>
+        </div>
+      </div>
+
+      <!-- CAPTACIÓN IA EXPRESS -->
+      <div style="background:var(--card, #0d0d1a);
+        border:1px solid rgba(0,212,170,.4);
+        border-radius:20px;overflow:hidden;
+        box-shadow:0 20px 60px rgba(0,0,0,.5);
+        transition:transform .3s;position:relative">
+
+        <div style="height:220px;overflow:hidden;position:relative;
+          background:radial-gradient(120% 90% at 50% 8%,rgba(0,212,170,.16),transparent 70%),
+                     linear-gradient(165deg,#101019 0%,#0a0a11 100%);
+          display:flex;align-items:center;justify-content:center">
+          <svg viewBox="0 0 320 170" aria-hidden="true" focusable="false" style="width:82%;height:auto">
+            <defs>
+              <clipPath id="pc-screen"><rect x="14" y="34" width="168" height="106" rx="6"/></clipPath>
+            </defs>
+            <rect x="8" y="12" width="180" height="128" rx="11" fill="#0e0e16" stroke="rgba(255,255,255,.1)"/>
+            <rect x="8" y="12" width="180" height="22" rx="11" fill="#15151f"/>
+            <rect x="8" y="23" width="180" height="11" fill="#15151f"/>
+            <circle cx="22" cy="23" r="3" fill="#3a3a4d"/>
+            <circle cx="32" cy="23" r="3" fill="#3a3a4d"/>
+            <circle cx="42" cy="23" r="3" fill="#3a3a4d"/>
+            <g clip-path="url(#pc-screen)">
+              <rect x="14" y="34" width="168" height="106" fill="#0b0b12"/>
+              <rect x="28" y="48" width="86" height="11" rx="4" fill="#7c4dff" opacity=".85"/>
+              <rect x="28" y="66" width="130" height="6" rx="3" fill="#2a2a3a"/>
+              <rect x="28" y="78" width="102" height="6" rx="3" fill="#22222e"/>
+              <rect x="28" y="94" width="112" height="16" rx="5" fill="#14141d" stroke="rgba(255,255,255,.08)"/>
+              <rect x="28" y="116" width="66" height="17" rx="5" fill="#7c4dff"/>
+            </g>
+            <g>
+              <rect x="128" y="112" width="86" height="34" rx="10" fill="#123527" stroke="rgba(37,211,102,.45)"/>
+              <path d="M142 142 l-6 11 11-5z" fill="#123527"/>
+              <circle cx="144" cy="125" r="7" fill="#25d366" opacity=".2"/>
+              <rect x="158" y="118" width="46" height="5" rx="2.5" fill="#1f5c40"/>
+              <g fill="#25d366">
+                <circle cx="160" cy="133" r="2.6"/>
+                <circle cx="168" cy="133" r="2.6" opacity=".55"/>
+                <circle cx="176" cy="133" r="2.6" opacity=".3"/>
+              </g>
+            </g>
+            <rect x="216" y="12" width="96" height="146" rx="11" fill="#0e0e16" stroke="rgba(255,255,255,.1)"/>
+            <rect x="226" y="26" width="24" height="118" rx="6" fill="#12121b" stroke="rgba(124,77,255,.24)"/>
+            <rect x="231" y="33" width="14" height="4" rx="2" fill="#7c4dff"/>
+            <rect x="231" y="44" width="14" height="18" rx="4" fill="#1a1a26"/>
+            <rect x="231" y="66" width="14" height="18" rx="4" fill="#1a1a26"/>
+            <rect x="256" y="26" width="24" height="118" rx="6" fill="#12121b" stroke="rgba(255,255,255,.07)"/>
+            <rect x="261" y="33" width="14" height="4" rx="2" fill="#4b4b66"/>
+            <rect x="261" y="44" width="14" height="18" rx="4" fill="#1a1a26"/>
+            <rect x="286" y="26" width="24" height="118" rx="6" fill="#12121b" stroke="rgba(0,212,170,.26)"/>
+            <rect x="291" y="33" width="14" height="4" rx="2" fill="#00d4aa"/>
+            <rect x="291" y="44" width="14" height="18" rx="4" fill="#0f2a24"/>
+          </svg>
+          <div style="position:absolute;top:16px;left:16px;
+            background:linear-gradient(135deg,#00d4aa,#009c80);
+            color:#04241d;font-size:.62rem;font-weight:700;
+            padding:4px 12px;border-radius:10px;
+            letter-spacing:.08em">RECOMENDADA</div>
+        </div>
+
+        <div style="padding:28px">
+          <div style="font-size:.7rem;font-weight:700;
+            letter-spacing:.15em;text-transform:uppercase;
+            color:#5eead4;margin-bottom:8px">EL PACK COMPLETO</div>
+          <div style="font-family:'Syne',sans-serif;
+            font-size:1.4rem;font-weight:800;
+            color:#fff;margin-bottom:6px">Captación IA Express</div>
+          <div style="font-size:.82rem;color:#9090b0;
+            margin-bottom:20px;line-height:1.5">
+            Todo lo necesario para que te encuentren, te escriban
+            y no se pierda ningún contacto. Montado y funcionando,
+            no explicado en un PDF.</div>
+          <div style="font-family:'Syne',sans-serif;
+            font-size:2.4rem;font-weight:800;color:#fff;
+            margin-bottom:4px;line-height:1">
+            650€<span style="font-size:1rem;color:#9090b0;
+            font-weight:400"> pago único</span></div>
+          <div style="font-size:.72rem;color:#9090b0;
+            margin-bottom:20px">Entrega en 48-72 h · Sin permanencia</div>
+          <div style="display:flex;flex-direction:column;
+            gap:9px;margin-bottom:24px">
+            <div style="display:flex;align-items:center;gap:9px;
+              font-size:.8rem;color:#e0e0f4">
+              <svg viewBox="0 0 24 24" style="width:15px;height:15px;
+                stroke:#22c55e;fill:none;stroke-width:2.5;flex-shrink:0">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>Auditoría exprés + ficha de Google Business optimizada</div>
+            <div style="display:flex;align-items:center;gap:9px;
+              font-size:.8rem;color:#e0e0f4">
+              <svg viewBox="0 0 24 24" style="width:15px;height:15px;
+                stroke:#22c55e;fill:none;stroke-width:2.5;flex-shrink:0">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>10 creatividades, 10 textos y landing de captación</div>
+            <div style="display:flex;align-items:flex-start;gap:9px;
+              font-size:.8rem;color:#e0e0f4">
+              <svg viewBox="0 0 24 24" style="width:15px;height:15px;
+                stroke:#22c55e;fill:none;stroke-width:2.5;flex-shrink:0;margin-top:3px">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>Plantillas de WhatsApp sobre enlaces wa.me, pipeline de leads y base de prospectos de tu zona</div>
+          </div>
+          <a href="/marketing/#captacion-ia"
+            onclick="wmTrack&amp;&amp;wmTrack('click_pack_marketing',{pack:'captacion-ia-express'})"
+            style="display:flex;align-items:center;
+            justify-content:center;gap:8px;
+            padding:13px;width:100%;
+            background:linear-gradient(135deg,#00d4aa,#009c80);
+            border:0;border-radius:10px;color:#04241d;text-decoration:none;
+            font-weight:700;font-size:.84rem;
+            transition:all .25s">
+            Ver Captación IA Express →
+          </a>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- COMPARATIVA DE PACKS
        Los importes, plazos y contenidos siguen saliendo de las tarjetas de
        arriba y de la FAQ de cada pack: aqui solo cambia la maquetacion.
@@ -1603,6 +1937,7 @@
         <li><a href="/atencion-cliente-ia/">Atención al cliente IA</a></li>
         <li><a href="/costes-eficiencia-empresarial-ia/">Reducción de costes</a></li>
         <li><a href="/coste-no-automatizar/">Coste de no automatizar</a></li>
+        <li><a href="/marketing/">Marketing con IA</a></li>
         <li><a href="/auditoria-geo-ia/">Auditoría GEO IA</a></li>
         <li><a href="/automatizaciones/">Automatizaciones</a></li>
         <li><a href="/servicios/">Ver todos los servicios</a></li>
