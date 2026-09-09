@@ -87,11 +87,11 @@
     {
       id:"auditoria", name:"Auditoría GEO IA", forWho:"Diagnóstico previo",
       tag:"Descubre si tu negocio aparece en ChatGPT, Grok y Perplexity.",
-      big:"899€", small:"pago único", sub:"Entrega en 48 h · Sin permanencia",
+      big:"899€", small:"pago único", sub:"Entrega en 24 h · Sin permanencia",
       desde:"899€ pago único",
-      short:"Análisis SEO/GEO/AEO de 35 checks con informe PDF profesional en 48 h.",
+      short:"Análisis SEO/GEO/AEO de 35 checks con informe PDF profesional en 24 h.",
       url:"https://whitemoon.es/auditoria-geo-ia/",
-      items:["Análisis completo SEO/GEO/AEO (35 checks)","Informe PDF profesional","Entrega en 48 h","Visibilidad en ChatGPT, Grok y Perplexity"]
+      items:["Análisis completo SEO/GEO/AEO (35 checks)","Informe PDF profesional","Entrega en 24 h","Visibilidad en ChatGPT, Grok y Perplexity"]
     },
     {
       id:"itp", warranty:true, name:"Calculadora ITP Pro", forWho:"Gestorías y administradores",
