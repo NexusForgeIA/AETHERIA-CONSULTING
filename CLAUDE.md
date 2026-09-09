@@ -22,7 +22,7 @@
   - Core Orion: 1.499€ setup + 99€/mes · Sin permanencia · Web nueva + agente de voz + SEO/GEO desde el día 1 (para quien NO tiene web)
   - WhiteMoon 360: 1.899€ setup + 199€/mes · Sin permanencia · Web + agente IA de chat 24/7 + CRM de gestión (reparto automático de trabajo, avisos al móvil, agenda, historial)
   - Core RAG: 2.499€ setup + 199€/mes · Sin permanencia · Agente IA entrenado con documentos propios del cliente — SIN web
-  - Auditoría GEO IA: 899€ pago único · informe en 48h
+  - Auditoría GEO IA: 899€ pago único · informe en 24h
   - Pack Ads: 599€/mes SIN setup · Sin permanencia · Gestión de Meta Ads (Facebook + Instagram) con creatividades incluidas. La inversión publicitaria en plataforma va APARTE, no incluida en la cuota
   - Calculadora ITP Pro: 599€ setup + 99€/mes · SaaS para gestorías y administradores de fincas
 - Precios OBSOLETOS que el SEO Guardian bloquea en páginas de packs (check 8, `BAD_PRICES` en `seo_guardian.py`): 4.500€, 8.500€, 2.899€, 1.800€, 3.200€, 999€. No reintroducirlos.
