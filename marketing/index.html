@@ -273,15 +273,20 @@
     padding:26px 22px 20px;display:flex;flex-direction:column;justify-content:center;align-items:center;
   }
   .pack--feat .mock{border-bottom:0;border-right:1px solid var(--hair);padding:clamp(26px,3vw,38px)}
-  .mock svg{width:100%;height:auto;max-width:460px}
-  .pack--feat .mock svg{max-width:none}
+  /* Tratamiento comun de las tres cards: misma altura de imagen, mismas
+     esquinas, mismo borde y el mismo degradado inferior de integracion, para
+     que la fila lea como una sola familia sobre el fondo oscuro. */
+  .shot{position:relative;width:100%;border-radius:12px;overflow:hidden;
+    border:1px solid var(--hair);background:#0a0a11;
+    box-shadow:0 14px 34px rgba(0,0,0,.42)}
+  .shot img{display:block;width:100%;height:240px;object-fit:cover}
+  .shot::after{content:"";position:absolute;inset:auto 0 0 0;height:42%;
+    pointer-events:none;background:linear-gradient(180deg,transparent,rgba(8,8,13,.55))}
+  /* La destacada apila las dos capturas de su demo en la misma columna. */
+  .mock__stack{display:flex;flex-direction:column;gap:14px;width:100%}
   /* Las dos cards de la fila inferior comparten borde superior: si sus bandas
-     miden distinto, los títulos se desalinean y parece un error de maquetación.
-     Altura mínima común + tope propio por dibujo (uno es apaisado y el otro
-     vertical) para que ambas bandas midan lo mismo. */
+     miden distinto, los títulos se desalinean y parece un error de maquetación. */
   .row2 .mock{min-height:344px}
-  #auditoria-ia .mock svg{max-width:430px}
-  #reels-ia .mock svg{max-width:298px}
   .mock__cap{margin-top:14px;font-size:.72rem;color:var(--dim);text-align:center;letter-spacing:.01em}
 
   /* ── Proceso: aquí los números SÍ son la información ────────────────── */
@@ -369,9 +374,9 @@
     .row2{grid-template-columns:1fr}
     .pack--feat .pack__inner{grid-template-columns:1fr}
     .pack--feat .mock{border-right:0;border-bottom:1px solid var(--hair)}
-    /* Apilada, la banda ocupa todo el ancho: sin tope el mockup vertical se
-       iba a >1000px de alto y se comia la pantalla entera. */
-    .pack--feat .mock svg{max-width:340px}
+    /* Apilada, la banda ocupa todo el ancho: las capturas se limitan para que
+       la card no se coma la pantalla entera. */
+    .pack--feat .mock__stack{max-width:520px;margin:0 auto}
     .steps{grid-template-columns:1fr;gap:26px}
     .who,.mech{grid-template-columns:1fr;gap:34px}
     .band{grid-template-columns:1fr;gap:22px}
@@ -387,6 +392,7 @@
     .btns{gap:10px}
     .pack__cta .btn{flex:1 1 100%}
     .mock{padding:20px 16px 16px}
+    .shot img{height:190px}
     .faq p{padding-right:0}
   }
 
@@ -544,72 +550,23 @@
           <div class="pack__inner">
 
             <div class="mock">
-              <svg viewBox="0 0 420 520" role="presentation" aria-hidden="true" focusable="false">
-                <defs>
-                  <clipPath id="cap-screen"><rect x="16" y="42" width="388" height="252" rx="6"/></clipPath>
-                </defs>
-
-                <!-- Mini navegador con la landing de captación -->
-                <rect x="10" y="10" width="400" height="290" rx="13" fill="#0e0e16" stroke="rgba(255,255,255,.1)"/>
-                <rect x="10" y="10" width="400" height="26" rx="13" fill="#15151f"/>
-                <rect x="10" y="24" width="400" height="12" fill="#15151f"/>
-                <circle cx="28" cy="23" r="3.6" fill="#3a3a4d"/>
-                <circle cx="41" cy="23" r="3.6" fill="#3a3a4d"/>
-                <circle cx="54" cy="23" r="3.6" fill="#3a3a4d"/>
-                <rect x="72" y="19" width="150" height="8" rx="4" fill="#22222e"/>
-                <g clip-path="url(#cap-screen)">
-                  <rect x="16" y="42" width="388" height="252" fill="#0b0b12"/>
-                  <rect x="40" y="66" width="182" height="16" rx="5" fill="#7c4dff" opacity=".85"/>
-                  <rect x="40" y="94" width="286" height="8" rx="4" fill="#2a2a3a"/>
-                  <rect x="40" y="110" width="228" height="8" rx="4" fill="#22222e"/>
-                  <rect x="40" y="142" width="250" height="26" rx="7" fill="#14141d" stroke="rgba(255,255,255,.08)"/>
-                  <rect x="54" y="152" width="78" height="7" rx="3.5" fill="#33334a"/>
-                  <rect x="40" y="178" width="250" height="26" rx="7" fill="#14141d" stroke="rgba(255,255,255,.08)"/>
-                  <rect x="54" y="188" width="104" height="7" rx="3.5" fill="#33334a"/>
-                  <rect x="40" y="216" width="140" height="28" rx="7" fill="#7c4dff"/>
-                  <rect x="60" y="226" width="100" height="8" rx="4" fill="#e6dcff"/>
-                </g>
-
-                <!-- Burbuja de WhatsApp sobre la esquina de la landing -->
-                <g>
-                  <rect x="238" y="246" width="164" height="60" rx="14" fill="#123527" stroke="rgba(37,211,102,.45)"/>
-                  <path d="M262 298 l-11 19 17-8z" fill="#123527"/>
-                  <circle cx="262" cy="266" r="11" fill="#25d366" opacity=".16"/>
-                  <path d="M267.3 269.9c-.25-.13-1.47-.73-1.7-.81-.22-.08-.39-.13-.56.13-.16.25-.64.81-.78.98-.15.16-.29.18-.54.06-.25-.13-1.04-.39-1.99-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.09-.16.05-.31-.01-.43-.07-.13-.56-1.35-.77-1.84-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.21.89 2.39 1.02 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.47-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.17-.48-.3" fill="#25d366"/>
-                  <rect x="282" y="258" width="104" height="7" rx="3.5" fill="#1f5c40"/>
-                  <g fill="#25d366">
-                    <circle class="mk-dot" cx="288" cy="282" r="4" opacity=".28"/>
-                    <circle class="mk-dot mk-dot--2" cx="301" cy="282" r="4" opacity=".28"/>
-                    <circle class="mk-dot mk-dot--3" cx="314" cy="282" r="4" opacity=".28"/>
-                  </g>
-                </g>
-                <text x="10" y="332" fill="#8285a0" font-family="Sora,sans-serif" font-size="12">Landing + WhatsApp</text>
-
-                <!-- Mini pipeline de leads: tres columnas -->
-                <rect x="10" y="352" width="400" height="140" rx="13" fill="#0e0e16" stroke="rgba(255,255,255,.1)"/>
-                <g>
-                  <rect x="24" y="366" width="120" height="112" rx="8" fill="#12121b" stroke="rgba(124,77,255,.24)"/>
-                  <rect x="36" y="378" width="46" height="6" rx="3" fill="#7c4dff"/>
-                  <rect x="36" y="394" width="96" height="24" rx="6" fill="#1a1a26"/>
-                  <rect x="36" y="424" width="96" height="24" rx="6" fill="#1a1a26"/>
-                  <rect x="36" y="454" width="96" height="14" rx="6" fill="#161620"/>
-                </g>
-                <g>
-                  <rect x="150" y="366" width="120" height="112" rx="8" fill="#12121b" stroke="rgba(255,255,255,.07)"/>
-                  <rect x="162" y="378" width="46" height="6" rx="3" fill="#4b4b66"/>
-                  <rect x="162" y="394" width="96" height="24" rx="6" fill="#1a1a26"/>
-                  <rect x="162" y="424" width="96" height="14" rx="6" fill="#161620"/>
-                </g>
-                <g>
-                  <rect x="276" y="366" width="120" height="112" rx="8" fill="#12121b" stroke="rgba(0,212,170,.26)"/>
-                  <rect x="288" y="378" width="46" height="6" rx="3" fill="#00d4aa"/>
-                  <rect x="288" y="394" width="96" height="24" rx="6" fill="#0f2a24"/>
-                  <path class="mk-tick" d="M300 406 l5 5 9-10" stroke="#00d4aa" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                  <rect x="288" y="424" width="96" height="14" rx="6" fill="#161620"/>
-                </g>
-                <text x="10" y="512" fill="#8285a0" font-family="Sora,sans-serif" font-size="12">Pipeline de leads</text>
-              </svg>
-              <p class="mock__cap">Ilustración del montaje. No son datos de un cliente.</p>
+              <div class="mock__stack">
+                <figure class="shot">
+                  <picture>
+                    <source srcset="/assets/img/marketing-packlead-landing.webp" type="image/webp">
+                    <img src="/assets/img/marketing-packlead-landing.jpg" alt="Landing del Pack Lead: cabecera con menú, titular y botones de pedir llamada y escribir por WhatsApp"
+                      width="800" height="494" loading="lazy" decoding="async" fetchpriority="auto">
+                  </picture>
+                </figure>
+                <figure class="shot">
+                  <picture>
+                    <source srcset="/assets/img/marketing-packlead-pipeline.webp" type="image/webp">
+                    <img src="/assets/img/marketing-packlead-pipeline.jpg" alt="Panel de leads del Pack Lead con tres columnas: nuevo, contactado y cerrado, con la ficha de cada contacto"
+                      width="800" height="494" loading="lazy" decoding="async" fetchpriority="auto">
+                  </picture>
+                </figure>
+              </div>
+              <p class="mock__cap">Capturas de la demo real. Los leads que se ven son ficticios.</p>
             </div>
 
             <div class="pack__body">
@@ -646,47 +603,14 @@
           <!-- ── AUDITORÍA IA ────────────────────────────────────────── -->
           <article class="pack" id="auditoria-ia">
             <div class="mock">
-              <svg viewBox="0 0 420 210" role="presentation" aria-hidden="true" focusable="false">
-                <rect x="6" y="10" width="408" height="190" rx="14" fill="#0e0e16" stroke="rgba(255,255,255,.09)"/>
-                <!-- Medidor circular -->
-                <g transform="translate(104,105)">
-                  <circle r="54" fill="none" stroke="rgba(124,77,255,.16)" stroke-width="11"/>
-                  <circle class="mk-gauge" r="54" fill="none" stroke="#00d4aa" stroke-width="11"
-                          stroke-linecap="round" transform="rotate(-90)"
-                          stroke-dasharray="339.3" stroke-dashoffset="128.9"/>
-                  <text x="0" y="6" text-anchor="middle" fill="#f0f0f5" font-family="Sora,sans-serif" font-size="34" font-weight="700">62</text>
-                  <text x="0" y="25" text-anchor="middle" fill="#8285a0" font-family="Sora,sans-serif" font-size="11">de 100</text>
-                </g>
-                <text x="104" y="187" text-anchor="middle" fill="#9090b0" font-family="Sora,sans-serif" font-size="11">Visibilidad</text>
-                <!-- Checklist -->
-                <g transform="translate(186,36)">
-                  <g>
-                    <circle cx="8" cy="8" r="8" fill="rgba(0,212,170,.14)"/>
-                    <path class="mk-tick" d="M4.5 8.2 l2.6 2.6 4.6-5" stroke="#00d4aa" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                    <rect x="24" y="4" width="122" height="6" rx="3" fill="#2f2f42"/>
-                    <rect x="24" y="14" width="82" height="5" rx="2.5" fill="#20202c"/>
-                  </g>
-                  <g transform="translate(0,36)">
-                    <circle cx="8" cy="8" r="8" fill="rgba(0,212,170,.14)"/>
-                    <path class="mk-tick mk-tick--2" d="M4.5 8.2 l2.6 2.6 4.6-5" stroke="#00d4aa" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                    <rect x="24" y="4" width="146" height="6" rx="3" fill="#2f2f42"/>
-                    <rect x="24" y="14" width="64" height="5" rx="2.5" fill="#20202c"/>
-                  </g>
-                  <g transform="translate(0,72)">
-                    <circle cx="8" cy="8" r="8" fill="rgba(124,77,255,.16)"/>
-                    <path d="M5.4 5.4 l5.2 5.2 M10.6 5.4 l-5.2 5.2" stroke="#9d70ff" stroke-width="1.9" stroke-linecap="round"/>
-                    <rect x="24" y="4" width="134" height="6" rx="3" fill="#2f2f42"/>
-                    <rect x="24" y="14" width="96" height="5" rx="2.5" fill="#20202c"/>
-                  </g>
-                  <g transform="translate(0,108)">
-                    <circle cx="8" cy="8" r="8" fill="rgba(124,77,255,.16)"/>
-                    <path d="M5.4 5.4 l5.2 5.2 M10.6 5.4 l-5.2 5.2" stroke="#9d70ff" stroke-width="1.9" stroke-linecap="round"/>
-                    <rect x="24" y="4" width="108" height="6" rx="3" fill="#2f2f42"/>
-                    <rect x="24" y="14" width="76" height="5" rx="2.5" fill="#20202c"/>
-                  </g>
-                </g>
-              </svg>
-              <p class="mock__cap">Ilustración del informe. No son datos de un cliente.</p>
+              <figure class="shot">
+                  <picture>
+                    <source srcset="/assets/img/marketing-auditoria.webp" type="image/webp">
+                    <img src="/assets/img/marketing-auditoria.jpg" alt="Panel de analítica web con gráficas de sesiones, tiempo de carga y porcentaje de rebote"
+                      width="1200" height="480" loading="lazy" decoding="async" fetchpriority="auto">
+                  </picture>
+              </figure>
+              <p class="mock__cap">Imagen de referencia. No es el informe de un cliente.</p>
             </div>
 
             <div class="pack__body">
@@ -730,44 +654,14 @@
           <!-- ── PACK REELS IA ───────────────────────────────────────── -->
           <article class="pack" id="reels-ia">
             <div class="mock">
-              <svg viewBox="0 0 300 240" role="presentation" aria-hidden="true" focusable="false">
-                <defs>
-                  <clipPath id="reel-screen"><rect x="80" y="26" width="140" height="196" rx="10"/></clipPath>
-                  <clipPath id="reel-t1"><rect x="90" y="52" width="40" height="71" rx="5"/></clipPath>
-                  <linearGradient id="reel-shine" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#9d70ff" stop-opacity="0"/>
-                    <stop offset="50%" stop-color="#9d70ff" stop-opacity=".38"/>
-                    <stop offset="100%" stop-color="#9d70ff" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-                <!-- Móvil vertical -->
-                <rect x="72" y="14" width="156" height="220" rx="22" fill="#15151f" stroke="rgba(255,255,255,.11)"/>
-                <rect x="80" y="26" width="140" height="196" rx="10" fill="#0b0b12"/>
-                <rect x="132" y="19" width="36" height="5" rx="2.5" fill="#0b0b12"/>
-                <g clip-path="url(#reel-screen)">
-                  <!-- Tres miniaturas 9:16 -->
-                  <rect x="90" y="52" width="40" height="71" rx="5" fill="#1c1430"/>
-                  <rect x="130" y="52" width="40" height="71" rx="5" fill="#0b0b12"/>
-                  <rect x="134" y="52" width="32" height="71" rx="5" fill="#122a26"/>
-                  <rect x="174" y="52" width="36" height="71" rx="5" fill="#1a1a26"/>
-                  <g clip-path="url(#reel-t1)">
-                    <rect class="mk-sweep" x="90" y="52" width="40" height="34" fill="url(#reel-shine)"/>
-                  </g>
-                  <!-- Subtítulos quemados -->
-                  <rect x="90" y="136" width="120" height="8" rx="4" fill="#2c2c3e"/>
-                  <rect x="90" y="150" width="86" height="8" rx="4" fill="#22222e"/>
-                  <!-- CTA final -->
-                  <rect x="90" y="176" width="92" height="20" rx="6" fill="#7c4dff"/>
-                  <rect x="100" y="183" width="60" height="6" rx="3" fill="#e6dcff"/>
-                  <!-- Ratio -->
-                  <rect x="90" y="34" width="30" height="10" rx="5" fill="#1a1a26"/>
-                  <text x="105" y="42" text-anchor="middle" fill="#9090b0" font-family="Sora,sans-serif" font-size="7">9:16</text>
-                </g>
-                <!-- Botón play -->
-                <circle cx="150" cy="88" r="23" fill="rgba(8,8,13,.72)" stroke="rgba(255,255,255,.22)"/>
-                <path d="M144 79 l16 9 -16 9z" fill="#f0f0f5"/>
-              </svg>
-              <p class="mock__cap">Ilustración del formato de entrega.</p>
+              <figure class="shot">
+                  <picture>
+                    <source srcset="/assets/img/marketing-reels.webp" type="image/webp">
+                    <img src="/assets/img/marketing-reels.jpg" alt="Línea de tiempo de edición de vídeo con varios clips cortos y pistas de color"
+                      width="1200" height="480" loading="lazy" decoding="async" fetchpriority="auto">
+                  </picture>
+              </figure>
+              <p class="mock__cap">Imagen de referencia del formato de trabajo.</p>
             </div>
 
             <div class="pack__body">
