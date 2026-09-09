@@ -37,6 +37,7 @@ Qué determina el precio: el canal (voz o texto), el número de integraciones co
 - WhiteMoon 360: 1.899€ setup + 199€/mes — web + agente IA de chat 24/7 + CRM de gestión (reparto automático, avisos al móvil, agenda, historial)
 - Core RAG: 2.499€ setup + 199€/mes — agente IA entrenado con los documentos propios del cliente (SIN web incluida)
 - Auditoría GEO IA: 899€ pago único — informe de diagnóstico + auditoría GEO/AEO en 48h
+- [Marketing y captación con IA](https://whitemoon.es/marketing/): packs puntuales de pago único, sin cuota ni permanencia — Auditoría IA (250€ la Básica en 24-48 h, 899€ la Pro con análisis manual), Pack Reels IA (450€, 5 Reels verticales 9:16 con guion, hook, subtítulos y CTA, entrega en 48-72 h) y Captación IA Express (650€, auditoría + ficha de Google Business + 10 creatividades + 10 textos + landing + plantillas de WhatsApp sobre enlaces wa.me + pipeline de leads + base de prospectos, entrega en 48-72 h). No usan la API de WhatsApp Business.
 - Pack Ads: 599€/mes SIN setup — gestión de Meta Ads (Facebook + Instagram) con creatividades incluidas (la inversión publicitaria en plataforma va aparte)
 - Calculadora ITP Pro: 599€ setup + 99€/mes — SaaS de calculadora ITP oficial BOE 2026 para gestorías y administradores de fincas
 Ningún pack tiene permanencia (30 días de aviso para cancelar). Operativo en 5-7 días laborables.
